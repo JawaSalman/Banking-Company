@@ -1,0 +1,165 @@
+nav {
+    background-color: var(--light-bg);
+    width: 83vw;
+    padding: 15px 34px;
+    line-height: 150%;
+    border-radius: 100px;
+    position: fixed;
+    top: 50px;
+    left: 162px;
+
+    .js_mobile_button {
+        background-color: var(--primary-color);
+        padding: 6px 14px;
+        border-radius: 82px;
+    }
+
+    .js_logo {
+        height: 40px;
+    }
+
+    ul {
+        display: flex;
+        width: 24%;
+        gap: 26px;
+
+
+        a {
+            color: var(--text-white);
+
+
+            &.active {
+                background-color: var(--lighter-bg);
+                border-radius: 82px;
+                padding: 12px 24px;
+            }
+        }
+
+
+    }
+
+    .js_signUp_logIn {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        p {
+            color: var(--text-white);
+        }
+
+        button {
+            color: var(--text-button-dark-);
+            border-radius: 82px;
+            padding: 14px 30px;
+            background-color: var(--primary-color);
+
+        }
+    }
+
+}
+
+.js_mobile_nav {
+    display: none;
+}
+
+@media (max-width: 1440px) {
+    nav {
+        width: 89vw;
+        top: 30px;
+        left: 80px;
+        padding: 10px 24px;
+
+        .js_logo {
+            height: 25px;
+        }
+
+        ul {
+            a {
+                &.active {
+                    padding: 10px 18px;
+                }
+            }
+        }
+
+        .js_signUp_logIn {
+            gap: 20px;
+
+            button {
+                padding: 12px 24px;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 992px) {
+    body {
+        max-width: 100%;
+
+        nav {
+            width: 91vw;
+            top: 40px;
+            left: 16px;
+            padding: 14px 14px 14px 24px;
+
+            .js_logo {
+                height: 20px;
+            }
+
+            ul {
+                display: none;
+            }
+
+            .js_signUp_logIn {
+                display: none;
+            }
+
+            .js_strokes {
+                height: 14px;
+                margin-top: 2px;
+
+            }
+        }
+
+        .js_mobile_nav {
+            display: block;
+        }
+
+        .js_mobile_list_container {
+
+            position: relative;
+
+
+            .js_mobile_list {
+                background-color: var(--primary-color);
+                line-height: 230%;
+                text-align: center;
+                width: 24vw;
+                border-radius: 10px;
+                position: absolute;
+                top: 110px;
+                right: -30vw;
+                transition: var(--transition);
+                display: none;
+                z-index: 3;
+
+                li:not(:last-child) {
+                    border-bottom: 1px solid #2626262a;
+                }
+
+                a {
+                    color: var(--text-button-dark-);
+                }
+            }
+
+            .js_slide_nav_list {
+                display: block;
+                right: 8vw;
+
+            }
+
+        }
+    }
+
+}
