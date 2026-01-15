@@ -1,0 +1,27 @@
+.hs-products-container {
+  display: flex;
+  padding: 20px 0;
+}
+
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 80px;
+  }
+
+  .hs-products-container {
+    gap: 0px;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hs-flex-sm-col {
+    flex-direction: column;
+  }
+
+}

@@ -19,6 +19,7 @@ import linkedIn from '/Images/Home Page/LinkedIn.png'
 import twitter from '/Images/Home Page/Twitter.png'
 
 
+
 function App() {
   const url = [{
     content: "Home",
@@ -93,7 +94,10 @@ function App() {
         p="Privacy Policy"
         s="Terms of Service"
       />
+
+
     </>
+
   )
 }
 
