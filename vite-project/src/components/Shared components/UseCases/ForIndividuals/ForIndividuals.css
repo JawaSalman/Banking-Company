@@ -1,0 +1,118 @@
+.ak_for_individuals{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px ;
+    gap:40px;
+    
+    &.revers{
+        flex-direction: row-reverse;
+    }
+    .ak_productdata{
+        background-image: url('./././././Images/HomePage/Main Texture.png');
+        background-size: cover;
+        border:2px solid var(--br-light);
+        border-radius: 20px;
+        width: 700px;
+        gap: 20px;
+        opacity: 1;
+        padding: 20px;
+        display: flex ;
+        flex-wrap: wrap;                    
+        justify-content: space-between;        
+        box-sizing: border-box;
+        margin-bottom: 40px;
+    }
+    .ak_countinar{
+        width: 748px;
+        gap: 14px;
+        opacity: 1;
+        margin-bottom: 40px;
+        .tittle_variant {
+    h1{
+        color:var(--text-white);
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0%;}
+    p{
+        font-weight: 200;
+        font-style: Light;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0%;
+    padding:5px;}}
+    .ak_card_grids {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;     
+        gap: 20px;     
+        width: 100%;    
+        margin: 30px 0;
+        img{
+            margin-bottom: 20px;
+        } 
+}
+.ak_button{
+            width: 148px;
+            opacity: 1;
+            border-radius: 60px;
+            border: 2px solid var(--lighter-bg);
+            background-color:var(--lighter-bg);
+            padding: 8px;
+            
+
+        }
+
+    }}
+    @media (max-width:992px) {
+        .ak_for_individuals{
+            width: 100%;
+            display: flex;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap:20px;
+            &.revers{
+                    flex-direction: column !important
+            }
+            .ak_productdata{
+                width: 100% !important;
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap;
+                gap:10px;
+                justify-content: center;
+                padding: 10px;
+                .tittle_variant{
+                    h1{
+                        font-size: 24px;
+                        width: 100%;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .ak_countinar{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width:100%;
+                padding: 0 15px;
+                text-align: center;
+            }
+            .ak_card_grids{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                    img{
+                        margin: 0 auto;
+                    }
+            }
+        
+    }}
