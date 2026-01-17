@@ -16,6 +16,7 @@ import contact from './components/Shared components/NavBar/js_NavBar_data_contac
 import icons from './components/Shared components/Footer/js_Footer_data_sm_icons'
 import btn from './components/Shared components/NavBar/js_NavBar_btn'
 
+
 function App() {
 
   return (
@@ -44,7 +45,10 @@ function App() {
         p="Privacy Policy"
         s="Terms of Service"
       />
+
+
     </>
+
   )
 }
 
