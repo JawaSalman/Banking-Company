@@ -1,6 +1,6 @@
 footer {
-    /* position: fixed; */
-    bottom: 0px;
+
+    margin-top: 40px;
     background-color: var(--light-bg);
 
     .js_logo_url_cnt {

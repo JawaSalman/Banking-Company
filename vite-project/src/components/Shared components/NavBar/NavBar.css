@@ -7,6 +7,7 @@ nav {
     position: fixed;
     top: 50px;
     left: 162px;
+    z-index: 5;
 
     .js_mobile_button {
         background-color: var(--primary-color);
@@ -43,12 +44,16 @@ nav {
         align-items: center;
         gap: 30px;
 
-        p {
+        a {
             color: var(--text-white);
         }
 
         button {
-            color: var(--text-button-dark-);
+            a {
+                color: var(--text-button-dark-);
+
+            }
+
             border-radius: 82px;
             padding: 14px 30px;
             background-color: var(--primary-color);

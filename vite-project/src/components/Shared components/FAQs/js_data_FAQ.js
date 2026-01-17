@@ -1,5 +1,4 @@
 
-
  const js_data_faqs = [
     {
         question: "How do I open an account with YourBank?",

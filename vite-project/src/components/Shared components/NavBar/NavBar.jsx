@@ -25,10 +25,10 @@ const NavBar = ({ logo, items, btn, smallBtn }) => {
                     })}
                 </ul>
                 <div className="js_signUp_logIn">
-                    <p>{btn[0].content}</p>
-                    <button> {btn[1].content} </button>
+                    <p> <NavLink to={btn[0].href} >{btn[0].content}</NavLink> </p>
+                    <button>  <NavLink to={btn[1].href} >{btn[1].content}</NavLink>  </button>
                 </div>
-                <button className="js_mobile_nav js_mobile_button" onClick={moveNavBar}><img src={smallBtn} className="js_strokes"/></button>
+                <button className="js_mobile_nav js_mobile_button" onClick={moveNavBar}><img src={smallBtn} className="js_strokes" /></button>
             </nav>
             <div className="js_mobile_nav js_mobile_list_container">
                 <ul className={`js_mobile_nav js_mobile_list ${js_isOpen ? 'js_slide_nav_list' : ''}`}>
