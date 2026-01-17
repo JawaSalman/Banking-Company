@@ -140,14 +140,4 @@ img {
   display: block;
 }
 
-@media (max-width: 1024px) {
-  .section-margin {
-    margin-top: 120px;
-  }
-}
 
-@media (max-width: 768px) {
-  .section-margin {
-    margin-top: 80px;
-  }
-}
