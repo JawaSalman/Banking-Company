@@ -5,8 +5,8 @@ nav {
     line-height: 150%;
     border-radius: 100px;
     position: fixed;
-    top: 50px;
-    left: 162px;
+    top: 40px;
+    left: 8vw;
     z-index: 5;
 
     .js_mobile_button {
@@ -71,7 +71,7 @@ nav {
     nav {
         width: 89vw;
         top: 30px;
-        left: 80px;
+        left: 5vw;
         padding: 10px 24px;
 
         .js_logo {
@@ -104,8 +104,6 @@ nav {
 
         nav {
             width: 91vw;
-            top: 40px;
-            left: 16px;
             padding: 14px 14px 14px 24px;
 
             .js_logo {
@@ -143,7 +141,7 @@ nav {
                 width: 24vw;
                 border-radius: 10px;
                 position: absolute;
-                top: 110px;
+                top: -55px;
                 right: -30vw;
                 transition: var(--transition);
                 display: none;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import js_data_faqs from './js_data_FAQ'
 import './FAQs.css'
-import js_arrowUp from '/Images/Home Page/Up Arrow.png'
-import js_arrowDown from '/Images/Home Page/Down Arrow.png'
+import js_arrowUp from '/Images/HomePage/Up Arrow.png'
+import js_arrowDown from '/Images/HomePage/Down Arrow.png'
 
 
 

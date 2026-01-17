@@ -1,7 +1,7 @@
 
-import facebook from '/Images/Home Page/Facebook.png'
-import linkedIn from '/Images/Home Page/LinkedIn.png'
-import twitter from '/Images/Home Page/Twitter.png'
+import facebook from '/Images/HomePage/Facebook.png'
+import linkedIn from '/Images/HomePage/LinkedIn.png'
+import twitter from '/Images/HomePage/Twitter.png'
 
 
 
