@@ -1,48 +1,27 @@
 import ProductCard from "../components/Home components/Our Product//Section/OurProductSection";
-<<<<<<< Updated upstream
 import OurTestimonials from "../components/Shared components/OurTestimonials/OurTestimonials";
 import FAQs from "../components/Shared components/FAQs/FAQs"
 import UseCase from "../components/Home components/UseCases/UseCase/UseCase"
-=======
-import OurTestimonials from "../components/OurTestimonials/OurTestimonials";
-import FAQs from "../components/Shared components/FAQs/FAQs";
 import FinancialCTA from "../components/Shared components/FinancialCTA/FinancialCTA";
-import TextureLeft from '../../public/Images/Home Page/Texture - Left.png'
->>>>>>> Stashed changes
-
-import Transactions from '../../public/Images/Home Page/Transactions.png'
-
-import CheckIcon from '../../public/Images/Home Page/Check Icon.png'
-import AbstractDesign from '../../public/Images/Home Page/Abstract Design.png'
-import HomeHero  from '../components/HomeHero/HomeHero'
+import TextureLeft from '/Images/HomePage/Texture - Left.png'
+import Transactions from '/Images/HomePage/Transactions.webp'
+import CheckIcon from '../../public/Images/HomePage/Check Icon.png'
+import AbstractDesign from '/Images/HomePage/Abstract Design.webp'
+import HomeHero from '../components/Home components/HomeHero/HomeHero'
 const Home = () => {
-<<<<<<< Updated upstream
-    return (
-        <>
-            <section>
-                <ProductCard />
-                <UseCase />
-                <FAQs />
-                <OurTestimonials />
-            </section>
-        </>
-
-    )
-}
-export default Home
-=======
   return (
     <>
       <section>
-          <HomeHero
-        icon={CheckIcon}
-        iconText="No LLC Required, No Credit Check."
-        title={`Welcome to YourBank<br>Empowering Your <span>Financial Journey</span>`}
-        description="At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs."
-        buttonText=" Open Account"
-        images={[ AbstractDesign,Transactions]}
-      /> 
+        <HomeHero
+          icon={CheckIcon}
+          iconText="No LLC Required, No Credit Check."
+          title={`Welcome to YourBank<br>Empowering Your <span>Financial Journey</span>`}
+          description="At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs."
+          buttonText=" Open Account"
+          images={[AbstractDesign, Transactions]}
+        />
         <ProductCard />
+        <UseCase />
         <FAQs />
         <OurTestimonials />
         <FinancialCTA
@@ -55,7 +34,7 @@ export default Home
         />
       </section>
     </>
-  );
-};
-export default Home;
->>>>>>> Stashed changes
+
+  )
+}
+export default Home

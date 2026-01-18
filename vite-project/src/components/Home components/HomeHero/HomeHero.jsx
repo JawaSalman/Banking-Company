@@ -1,5 +1,5 @@
 // Import reusable IconText component
-import IconText from "../Shared components/IconText/IconText";
+import IconText from "../../Shared components/IconText/IconText";
 // Import component-specific styles
 import "./HomeHero.css";
 // Import Link for client-side navigation (React Router)
@@ -35,10 +35,10 @@ const HomeHero = ({
   return (
     // Main hero container
     <section className="ma-hero-container">
-      
+
       {/* Left side: text content */}
       <div className="ma-hero-left">
-        
+
         {/* Icon with text */}
         <IconText icon={icon} text={iconText} />
 
