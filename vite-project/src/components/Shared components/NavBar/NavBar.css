@@ -1,10 +1,10 @@
 nav {
+    position: fixed;
     background-color: var(--light-bg);
-    width: 83vw;
+    width: 82vw;
     padding: 15px 34px;
     line-height: 150%;
     border-radius: 100px;
-    position: fixed;
     top: 40px;
     left: 8vw;
     z-index: 5;
