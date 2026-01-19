@@ -1,9 +1,12 @@
+import OurValues from "../components/Careers components/OurValues";
 
 const Careers = () => {
     return (
-        <div>
-
-        </div>
+        <>
+            <section>
+                <OurValues/>
+            </section>
+        </>
     )
 }
 
