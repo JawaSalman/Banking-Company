@@ -10,13 +10,13 @@ const Home = () => {
   return (
     <>
       <section>
-        <HomeHero/>
+        <HomeHero />
         <ProductCard />
         <UseCase />
         <OurFeatures />
         <FAQs />
         <OurTestimonials />
-        <FinancialCTA/>
+        <FinancialCTA />
       </section>
     </>
   );
