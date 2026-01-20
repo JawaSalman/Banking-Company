@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { OurProductsHeaderData, OurProductsData } from "../data/data";
-import OurProductHeader from "../Components/Header/OurProductHeader";
-import ProductCard from '../Components/ProductCard/ProductCard';
-import './OurProductSection.css';
+import React, { useState } from "react"
+import { OurProductsHeaderData, OurProductsData } from "../data/data"
+import OurProductHeader from "../Components/Header/OurProductHeader"
+import ProductCard from '../Components/ProductCard/ProductCard'
+import './OurProductSection.css'
 
 
 const OurProductSection = () => {

@@ -1,5 +1,5 @@
-import mission from '/public/Images/AboutPage/Mission.webp';
-import vision from '/public/Images/AboutPage/Vision.webp';
+import mission from '/public/Images/AboutPage/Mission.webp'
+import vision from '/public/Images/AboutPage/Vision.webp'
 import background from '/public/Images/AboutPage/Mission & Vision Texture.png'
 const missionVisionData = {
   background: background,

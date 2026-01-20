@@ -1,5 +1,4 @@
-import React from 'react';
-import './OurProductHeader.css';
+import './OurProductHeader.css'
 
 const OurProductHeader = ({ Headerdata, activeCategory, setCategory }) => {
   return (

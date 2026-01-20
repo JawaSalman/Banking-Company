@@ -1,8 +1,8 @@
 
-import "./OurValues.css";
-import OurValuesCard from "./OurValuesCard";
-import OurValuesTitle from "./ourValuesTitle";
-import { CardData } from "./OurValuesCardData"; 
+import "./OurValues.css"
+import OurValuesCard from "./OurValuesCard"
+import OurValuesTitle from "./ourValuesTitle"
+import { CardData } from "./OurValuesCardData"
 const OurValues = () => {
     return (
         <section className="section-margin ma-ourValues-section">

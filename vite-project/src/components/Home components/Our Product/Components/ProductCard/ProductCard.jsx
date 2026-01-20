@@ -1,5 +1,4 @@
-import React from 'react';
-import './ProductCard.css';
+import './ProductCard.css'
 
 const ProductCard = ({ card }) => {
   return (

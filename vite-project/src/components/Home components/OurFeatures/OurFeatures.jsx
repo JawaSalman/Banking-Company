@@ -99,9 +99,8 @@ const OurFeatures = () => {
           {["Online Banking", "Financial Tools", "Customer Support"].map(category => (
             <button
               key={category}
-              className={`mh-feature-btn ${
-                selectedCategory === category ? "mh-feature-active" : ""
-              }`}
+              className={`mh-feature-btn ${selectedCategory === category ? "mh-feature-active" : ""
+                }`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}

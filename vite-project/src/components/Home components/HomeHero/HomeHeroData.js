@@ -1,6 +1,6 @@
-import Transactions from "/Images/HomePage/Transactions.webp";
-import CheckIcon from "/public/Images/HomePage/Check Icon.png";
-import AbstractDesign from "/Images/HomePage/Abstract Design.webp";
+import Transactions from "/Images/HomePage/Transactions.webp"
+import CheckIcon from "/public/Images/HomePage/Check Icon.png"
+import AbstractDesign from "/Images/HomePage/Abstract Design.webp"
 
 const homeHeroData = {
   icon: CheckIcon,

@@ -1,6 +1,4 @@
 
-
-
 export const CardData=[{
     id:1,
     title:"Integrity",
