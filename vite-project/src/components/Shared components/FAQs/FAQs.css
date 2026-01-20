@@ -7,11 +7,14 @@
 
     h1 {
         font-size: 48px;
+        align-self: flex-start;
     }
 
     p {
         font-size: 18px;
         margin: 14px 0 80px;
+        align-self: flex-start;
+
     }
 
     .js-faqs-cont {
