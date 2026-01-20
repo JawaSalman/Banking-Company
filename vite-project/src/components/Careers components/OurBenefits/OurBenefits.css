@@ -1,0 +1,253 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= Benefits Section ================= */
+.mh-benefits {
+  background-color: #1A1A1A;
+  color: #ffffff;
+  padding: 0px 162px;
+  margin-bottom: 150px;
+  font-family: 'Lexend';
+}
+
+/* ================= Benefits Section Header ================= */
+.mh-benefits-header {
+  padding-right: 300px;
+  margin-bottom: 80px;
+}
+
+.mh-benefits-header h1 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 150%;
+  margin-bottom: 14px;
+}
+
+.mh-benefits-header h1 span {
+  color: #CAFF33;
+}
+
+.mh-benefits-header p {
+  font-weight: 300;
+  line-height: 150%;
+  color: #B3B3B3;
+  font-size: 18px;
+}
+
+/* ================= Benefits Grid ================= */
+.mh-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+
+/* ================= Benefits Card ================= */
+.mh-card {
+  position: relative;
+  padding: 50px;
+  border-radius: 20px 50px 20px 50px;
+  background: linear-gradient(267.5deg, #1C1C1C 40.67%, rgba(28, 28, 28, 0) 99.81%),
+linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%);
+
+  border: 1px solid #1C1C1C; 
+  overflow: hidden;
+  z-index: 0;
+}
+
+
+/* ================= Benefits Cards with different border-radius ================= */
+.mh-benefits-grid .mh-card:nth-child(1) {
+  border-radius: 50px 20px 50px 20px;
+}
+
+.mh-benefits-grid .mh-card:nth-child(4) {
+  border-radius: 50px 20px 20px 50px; 
+}
+
+/* ================= Card Head ================= */
+.mh-card-head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  min-height: 98px;
+}
+
+/* ================= Icon Wrapper ================= */
+.mh-card-icon {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(202, 255, 51, 0.05) 0%,
+    rgba(202, 255, 51, 0) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* ====== Middle Glow Layer ====== */
+.mh-card-icon::before {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  border-radius: 50px;
+  background: linear-gradient(180deg, rgba(202, 255, 51, 0.1) -66.22%, rgba(202, 255, 51, 0) 85.46%);
+  border: 1px solid;
+  border-image-source: linear-gradient(180deg, rgba(202, 255, 51, 0.2) -173.65%, rgba(202, 255, 51, 0) 87.22%);
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* ================= Icon Image ================= */
+.mh-card-icon img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= Title ================= */
+.mh-card-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+/* ================= Description ================= */
+.mh-card-desc {
+  line-height: 150%;
+  color: #B3B3B3;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/* ================= Responsive 1440px ================= */
+@media screen and (max-width:1440px) {
+  .mh-benefits {
+    padding: 0px 80px;
+    margin-bottom: 120px;
+  }
+
+  .mh-benefits-header {
+    padding-right: 250px;
+    margin-bottom: 60px;
+  }
+
+  .mh-benefits-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  .mh-benefits-header p {
+    font-size: 16px;
+  }
+
+  .mh-benefits-grid {
+    gap: 60px;
+  }
+
+  .mh-card {
+    border-radius: 14px 40px 14px 40px;
+    padding: 40px;
+  }
+
+  .mh-card-head {
+    gap: 14px;
+    margin-bottom: 24px;
+    min-height: 76px;
+  }
+
+  .mh-card-icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .mh-card-icon::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mh-card-icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .mh-card-title {
+    font-size: 20px;
+  }
+
+  .mh-card-desc {
+    font-size: 16px;
+  }
+}
+
+/* ================= Responsive 992px ================= */
+@media screen and (max-width:992px) {
+  .mh-benefits {
+    padding: 0px 16px;
+    margin-bottom: 80px;
+  }
+
+  .mh-benefits-header {
+    padding-right: 0px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .mh-benefits-header h1 {
+    font-size: 28px;
+  }
+
+  .mh-benefits-header p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .mh-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .mh-card {
+    padding: 24px;
+  }
+
+  .mh-card-head {
+    margin-bottom: 20px;
+    min-height: auto;
+  }
+
+  .mh-card-icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .mh-card-icon::before {
+    width: 56px;
+    height: 56px;
+  }
+
+  .mh-card-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mh-card-desc {
+    font-size: 14px;
+  }
+}
