@@ -19,6 +19,7 @@ const HomeHero = () => {
 
   return (
     <section className="ma-hero-container">
+
       {/* Left side */}
       <div className="ma-hero-left">
         <IconText icon={icon} text={iconText} />

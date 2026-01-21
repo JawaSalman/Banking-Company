@@ -1,14 +1,22 @@
 .ma-hero-container {
   display: flex;
-  gap: 120px;
-  margin: 0 162px;
-  margin-top: 198px;
+  /* gap: 120px; */
+      margin: 198px auto 0;
+    width: 95%;
+    max-width: 1596px;
+
 }
 
+.MainTexture {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 /* ================= Left ================= */
 
 .ma-hero-left {
-  width: 825px;
+  width: 51.7%;
+  max-width: 825px;
 }
 
 .ma-icon-text {
@@ -51,13 +59,14 @@
 .ma-hero-right {
   display: flex;
   position: relative;
+      margin: 0 auto;
 }
 
 .ma-hero-image-0 {
   width: 418px;
   height: 383px;
   position: absolute;
-  right: -28%;
+  right: -5.7291vw;
   top: 36px;
 }
 
@@ -71,12 +80,13 @@
 
 @media screen and (max-width:1440px) {
   .ma-hero-container {
-    margin: 0px 80px;
-    margin-top: 133px;
+    margin: 133px auto 0;
+    max-width: 1280px;
   }
 
   .ma-hero-left {
-    width: 650px;
+    width: 50%;
+    max-width: 650px;
   }
 
   .ma-icon-text {
@@ -107,10 +117,20 @@
     font-size: 14px;
   }
 
+
+  .ma-hero-right {
+    width: 32%;
+    max-width: 410px;
+  }
   .ma-hero-image-0 {
     width: 300px;
     height: 275px;
+      right: -28%;
+  top: 36px;
   }
+
+
+
 
   .ma-hero-image-1 {
     width: 410px;

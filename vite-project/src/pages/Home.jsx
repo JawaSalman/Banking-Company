@@ -10,6 +10,10 @@ const Home = () => {
   return (
     <>
       <section>
+        <div className="ma-hero-background-abstract">
+          <img src="\Images\HomePage\Main Texture.png" className="MainTexture" />
+        </div>
+
         <HomeHero />
         <ProductCard />
         <UseCase />
