@@ -1,8 +1,8 @@
 
 import "./OurValues.css"
-const ourValuesTitle = ({ftitle,title,subTitle}) => {
+const ourValuesTitle = ({ ftitle, title, subTitle }) => {
     return (
-        <div className="ma-ourValues-Title container section-margin">
+        <div className="ma-ourValues-Title ma-ov-container section-margin">
             <h1>{ftitle} {" "}
                 <span>{title}</span>
             </h1>

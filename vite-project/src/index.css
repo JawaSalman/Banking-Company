@@ -42,7 +42,6 @@ body {
   color: var(--text-white);
   font-family: "Lexend", sans-serif;
   line-height: 1.5;
-  overflow-x: hidden;
 }
 
 input[type="submit"],

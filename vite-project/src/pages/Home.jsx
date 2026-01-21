@@ -1,4 +1,4 @@
-import ProductCard from "../components/Home components/Our Product//Section/OurProductSection";
+import ProductCard from "../components/Home components/Our Product/Section/OurProductSection";
 import OurTestimonials from "../components/Shared components/OurTestimonials/OurTestimonials";
 import FAQs from "../components/Shared components/FAQs/FAQs";
 import UseCase from "../components/Home components/UseCases/UseCase/UseCase";
@@ -10,13 +10,17 @@ const Home = () => {
   return (
     <>
       <section>
-        <HomeHero/>
+        <div className="ma-hero-background-abstract">
+          <img src="\Images\HomePage\Main Texture.png" className="MainTexture" />
+        </div>
+
+        <HomeHero />
         <ProductCard />
         <UseCase />
         <OurFeatures />
         <FAQs />
         <OurTestimonials />
-        <FinancialCTA/>
+        <FinancialCTA />
       </section>
     </>
   );

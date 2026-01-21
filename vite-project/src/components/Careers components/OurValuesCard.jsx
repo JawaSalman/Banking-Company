@@ -1,7 +1,7 @@
 
 import "./OurValues.css"
 
-const OurValuesCard = ({title,paragraph}) => {
+const OurValuesCard = ({ title, paragraph }) => {
     return (
         <>
             <div className="ma-ourValues-card">

@@ -11,9 +11,7 @@
     font-size: 18px;
 }
 @media (max-width:1440px) {
-.ma-ourValues-Title{
-    padding: 0px 80px;
-}
+
 .ma-ourValues-Title h1{
     padding-right:150px;
     font-size: 38px;
@@ -26,26 +24,23 @@
 }
 
 @media (max-width:992px){
-    .ma-ourValues-Title {
-        padding: 0 40px !important;
-    }
-    
+
     .ma-ourValues-Title h1 {
         padding-right: 0;
         font-size: 32px;
         text-align: center;
     }
-    
+
     .ma-ourValues-Title p {
         max-width: 800px !important;
         font-size: 16px;
         text-align: center;
         margin: 0 auto;
+        font-weight: 300;
     }
 }
 @media (max-width:500px) {
 .ma-ourValues-Title{
-    padding: 0px 16px;
     text-align: center;
 }
 .ma-ourValues-Title h1{
@@ -67,14 +62,19 @@
 .ma-values-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 80px; 
+    gap: 80px;
     margin-top: 80px;
 }
+.ma-ov-container {
+    width: 95%;
+    max-width: 1596px;
+    margin: 150px auto 0;
+}
 .ma-card {
-    width: 100%; 
-    max-width: 758px; 
-    height: auto; 
-    min-height: 198px; 
+    width: 100%;
+    max-width: 758px;
+    height: auto;
+    min-height: 198px;
     border-left: 2px solid var(--primary-color);
     padding: 0 0 0 30px;
     margin: 0 auto;
@@ -86,17 +86,20 @@
 }
 .ma-card-p {
     padding-top: 30px;
-    color:var(--text-description); 
+    color:var(--text-description);
     font-size: 18px;
 }
 
 @media (max-width:1440px){
 .ma-values-grid {
-    padding: 0 80px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px; 
+    gap: 60px;
     margin-top: 60px;
+}
+.ma-ov-container {
+    max-width: 1280px;
+    margin: 120px auto 0;
 }
 .ma-card {
     width: 100%;
@@ -108,51 +111,53 @@
 .ma-card-title {
     color:var(--text-sub);
     font-size: 40px;
-    
+
 }
 .ma-card-p {
     padding-top: 20px;
-    color:var(--text-description); 
+    color:var(--text-description);
     font-size: 16px;
 }
 }
 
 @media (max-width: 992px) {
 .ma-values-grid {
-    padding: 0 40px;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: 1fr;
     gap: 40px;
     margin-top: 50px;
 }
-    
+.ma-ov-container {
+        margin: 80px auto 0;
+    }
+
 .ma-card {
     min-height: 160px;
     padding-left: 20px;
     max-width: 100%;
 }
-    
+
 .ma-card-title {
     color:var(--text-sub);
     font-size: 28px;
     }
 .ma-card-p {
     padding-top: 20px;
-    color:var(--text-description); 
+    color:var(--text-description);
     font-size: 15px;
 }
 }
 @media (max-width:390px) {
 .ma-ourValues-Title{
-    padding: 0px 16px;
     text-align: center;
 }
 .ma-values-grid {
     padding: 0 16px;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 50px; 
+    gap: 50px;
     margin-top: 50px;
 }
+
 .ma-card {
     border-left: 2px solid var(--primary-color);
     padding-left: 20px;
@@ -160,14 +165,17 @@
     min-height: auto;
 }
 
+
+
+
 .ma-card-title {
     color:var(--text-sub);
     font-size: 30px;
-    
+
 }
 .ma-card-p {
     padding-top: 14px;
-    color:var(--text-description); 
+    color:var(--text-description);
     font-size: 14px;
 }
 }

@@ -13,7 +13,7 @@ const OurProductHeader = ({ Headerdata, activeCategory, setCategory }) => {
 
       <div className="hs-toggle-container border">
         <button
-          className={`hs-btn-text ${activeCategory === 'individual' ? 'hs-active-btn' : 'hs-not-active-btn'}`}
+          className={`hs-btn-text ${activeCategory == 'individual' ? 'hs-active-btn' : 'hs-not-active-btn'}`}
           onClick={() => setCategory('individual')}
         >
           {Headerdata.individualBtn}

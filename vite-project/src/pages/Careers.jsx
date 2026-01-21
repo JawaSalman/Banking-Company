@@ -1,3 +1,4 @@
+import JobOpenings from "../components/Careers components/JobOpenings/JobOpeningsSection/JobOpenings";
 import OurBenefits from "../components/Careers components/OurBenefits/OurBenefits";
 import OurValues from "../components/Careers components/OurValues";
 import FAQs from "../components/Shared components/FAQs/FAQs";
@@ -9,7 +10,8 @@ const Careers = () => {
             <section>
                 <OurValues />
                 <FAQs />
-                <OurBenefits/>
+                <OurBenefits />
+                <JobOpenings />
                 <FinancialCTA />
             </section>
         </>

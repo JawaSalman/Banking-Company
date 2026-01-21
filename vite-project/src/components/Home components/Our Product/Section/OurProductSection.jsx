@@ -13,7 +13,7 @@ const OurProductSection = () => {
   });
 
   return (
-    <section className="container section-margin">
+    <section className="hs-op-section hs-section-margin">
       <OurProductHeader
         Headerdata={OurProductsHeaderData}
         activeCategory={category}
