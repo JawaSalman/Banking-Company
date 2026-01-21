@@ -8,8 +8,8 @@ const Careers = () => {
         <>
             <section>
                 <OurValues />
+                <OurBenefits />
                 <FAQs />
-                <OurBenefits/>
                 <FinancialCTA />
             </section>
         </>
