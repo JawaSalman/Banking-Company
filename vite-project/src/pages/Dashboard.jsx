@@ -1,10 +1,27 @@
+import { useState } from 'react';
 
+import TabsComponent from '../components/Dashboard components/TabsComponent/TabsComponent';
+import TableComponent from '../components/Dashboard components/TableComponent/TableComponent';
+  
 const Dashboard = () => {
+  const [pageId, setPageId] = useState(null);
+  const [sectionId, setSectionId] = useState(null);
+
   return (
     <div>
-      
-    </div>
-  )
-}
+      <TabsComponent
+        onChange={(p,s) => {
+          setPageId(p);
+          setSectionId(s);
+        }}
+      />
 
-export default Dashboard
+      <TableComponent
+        activePage={pageId}
+        activeSection={sectionId}
+      />
+    </div>
+  );
+};
+
+export default Dashboard;

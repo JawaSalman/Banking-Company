@@ -1,0 +1,179 @@
+.ma-table-container {
+  width: 100%;
+  max-width: 1596px;
+  margin: 90px auto 0;
+}
+
+.ma-table-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.ma-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* الجدول */
+.ma-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--light-bg);
+  border-radius: 18px;
+  overflow: hidden;
+
+  border: 1px solid var(--br-light);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(202, 255, 51, 0.08);
+}
+
+/* رؤوس الأعمدة */
+.ma-table thead th {
+  padding: 18px;
+  background: var(--lighter-bg);
+  color: var(--text-white);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+
+  border-bottom: 1px solid var(--br-light);
+}
+
+.ma-table tbody tr {
+  transition: var(--transition);
+}
+
+.ma-table tbody tr:hover {
+  background: rgba(202, 255, 51, 0.04);
+}
+
+.ma-table td {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 14px;
+
+  border-bottom: 1px solid var(--br-light);
+}
+
+.ma-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ma-table tbody tr:hover td {
+  color: var(--text-white);
+}
+
+.ma-no-table,
+.ma-no-data {
+  width: 100%;
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 20px 30px;
+  text-align: center;
+
+  color: var(--text-white);
+  font-size: 16px;
+  font-weight: 500;
+
+  background: var(--lighter-bg);
+  border: 1px dashed rgba(59, 130, 246, 0.4);
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(202, 255, 51, 0.08);
+}
+
+/* تنسيقات التعديل */
+.ma-input-edit {
+  width: 100%;
+  padding: 10px 12px;
+  
+  background: var(--lighter-bg);
+  border: 1px solid var(--br-light);
+  border-radius: 8px;
+  
+  color: var(--text-white);
+  font-family: inherit;
+  font-size: 14px;
+  
+  transition: var(--transition);
+}
+
+.ma-input-edit:focus {
+  outline: none;
+  border-color: rgba(202, 255, 51, 0.5);
+  box-shadow: 0 0 0 3px rgba(202, 255, 51, 0.1);
+}
+
+.ma-input-edit::placeholder {
+  color: var(--text-light);
+  opacity: 0.5;
+}
+
+.ma-actions {
+  white-space: nowrap;
+}
+
+.ma-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 4px;
+  
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.ma-btn-add {
+  background:var(--primary-color);
+  color: #000;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+.ma-btn-edit {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+
+
+.ma-btn-save {
+  background: linear-gradient(135deg, #2196F3, #0b7dda);
+  color: white;
+}
+
+
+
+.ma-btn-cancel {
+  background: linear-gradient(135deg, #f44336, #da190b);
+  color: white;
+}
+
+
+
+.ma-new-row {
+  background: rgba(202, 255, 51, 0.05);
+
+}
+
+
+
+.ma-empty-state {
+  padding: 40px !important;
+  color: var(--text-light) !important;
+
+}

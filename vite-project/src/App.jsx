@@ -14,6 +14,7 @@ import url from './components/Shared components/NavBar/js_NavBar_data_url'
 import contact from './components/Shared components/Footer/js_Footer_data_contact'
 import icons from './components/Shared components/Footer/js_Footer_data_sm_icons'
 import btn from './components/Shared components/NavBar/js_NavBar_btn'
+import Dashboard from './pages/Dashboard'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/security" element={<Security />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
+          <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer
         logo={logo}

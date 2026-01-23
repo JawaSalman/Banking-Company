@@ -1,63 +1,83 @@
+
+import { useEffect, useState } from "react";
+import "./MissionVision.css";
+import missionVisionData from "./MissionVisionData";
+
+const STORAGE_KEY = "tableData-3-1";
+
 /**
  * MissionVision Component
  * -----------------------
- * This component renders the "Mission & Vision" section of the website.
- * It displays:
- *  - A section header with title and description
- *  - A list of items (Mission, Vision, etc.)
- *  - Each item contains:
- *      - A title and descriptive text
- *      - A background image
- *      - A foreground item image
- *
- * The data is imported from a separate file (missionVisionData),
- * allowing easy content updates without touching the component code.
+ * Displays a mission & vision section with text and images.
+ * Data is persisted in localStorage so changes survive page reloads.
  */
-
-import './MissionVision.css'
-
-// Import the data for Mission & Vision section
-import missionVisionData from './MissionVisinData' // Make sure the filename is correct
-
 const MissionVision = () => {
-  // Destructure the data from imported missionVisionData
-  const { background, title, description, items } = missionVisionData
+
+  /**
+   * State: items
+   * -------------
+   * Initializes from localStorage if available,
+   * otherwise falls back to default data from MissionVisionData.
+   */
+  const [items, setItems] = useState(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : missionVisionData.items;
+  });
+
+  /**
+   * Effect: localStorage sync
+   * -------------------------
+   * Whenever `items` changes, update localStorage
+   * to keep the data persistent.
+   */
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+  }, [items]);
+
+  // Destructure static content for easier access
+  const { background, title, description } = missionVisionData;
 
   return (
     <div className="ma-mission-vision-container">
-      {/* Section header with title and description */}
+      
+      {/* Header section with title and description */}
       <div className="ma-header">
         <h1 className="ma-title">{title}</h1>
         <p className="ma-description">{description}</p>
       </div>
 
-      {/* List of Mission/Vision items */}
+      {/* List of mission/vision items */}
       <div className="ma-list">
-        {items.map((item, index) => (
-          <div className="ma-item" key={index}>
-            {/* Item text content */}
+        {items.map((item) => (
+          
+          // Individual mission/vision card
+          <div className="ma-item" key={item.id}>
+            
+            {/* Textual content */}
             <div className="ma-item-data">
               <h2 className="ma-item-title">{item.title}</h2>
               <p className="ma-item-text">{item.text}</p>
             </div>
 
-            {/* Item images: background and foreground */}
+            {/* Image container with background + foreground image */}
             <div className="ma-image-wrapper">
-              {/* Background image (same for all items) */}
-              <img className="ma-bg-image" src={background} alt="" />
-
-              {/* Foreground image (specific to each item) */}
+              <img
+                className="ma-bg-image"
+                src={background}
+                alt=""
+              />
               <img
                 className="ma-item-image"
                 src={item.image}
                 alt={item.title}
               />
             </div>
+
           </div>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MissionVision
+export default MissionVision;
