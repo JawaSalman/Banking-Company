@@ -139,7 +139,7 @@ nav {
             line-height: 400%;
             text-align: center;
             border-radius: 10px;
-            position: absolute;
+            position: fixed;
             top: 0px;
             left: 0px;
             display: none;
