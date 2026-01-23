@@ -1,0 +1,291 @@
+
+
+.mar-protectYou-section{
+    margin: 150px 8.17vw;
+
+}
+.mar-ProtectYou-Title h1{
+    padding-right:300px;
+    font-size: 48px;
+}
+.mar-ProtectYou-Title p{
+    padding-top: 14px !important;
+    max-width: 1306px !important;
+    font-size: 17px;
+}
+@media (max-width:1440px){
+
+    .mar-protectYou-section{
+    margin: 120px 5.6vw;
+    }
+    .mar-ProtectYou-Title h1{
+    padding-right:150px;
+    font-size: 38px;
+    }
+    .mar-ProtectYou-Title p{
+    padding-top: 10px !important;
+    max-width: 1030px !important;
+    font-size: 15px;
+    }
+}
+@media (max-width:390px){
+    .mar-protectYou-section{
+    margin: 80px 4.2vw;
+    text-align: center;
+    }
+    .mar-ProtectYou-Title h1{
+    padding-right: 0px;
+    font-size: 28px;
+    }
+    .mar-ProtectYou-Title p{
+    padding-top: 10px !important;
+    max-width: 358px !important;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    }
+}
+
+.mar-protect-wrapper {
+    position: relative; 
+    margin-top: 117.5px !important;
+}
+
+.mar-protect-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    padding-top: 82px;
+    padding-left: 93px;
+    padding-right: 94px;
+    z-index: 10;
+}
+.backGround{
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%), 
+        linear-gradient(267.5deg, rgba(28, 28, 28, 0.8) 40.67%, rgba(28, 28, 28, 0) 99.81%);
+    z-index: -1;
+}
+.mar-card{
+    box-sizing: border-box;
+    padding: 50px;
+    gap: 24px;
+    max-width: 688px;
+    background: linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%), linear-gradient(267.5deg, #1C1C1C 40.67%, rgba(28, 28, 28, 0) 99.81%), url(asfalt-light.png);
+    background-blend-mode: normal, normal, screen;
+    border: 1px solid #262626;
+    border-radius: 20px;
+}
+.firstSection-card{
+    display: flex;
+    align-items: center;
+    max-width: 590px;
+    gap: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.img-card{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px;
+    gap: 10px;
+    width: 98px;
+    height: 98px;
+    background: linear-gradient(180deg, rgba(202, 255, 51, 0.05) 0%, rgba(202, 255, 51, 0) 100%);
+    border-radius: 70px;
+}
+.img-card img{
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 10px;
+    width: 74px;
+    height: 74px;
+    background: linear-gradient(180deg, rgba(202, 255, 51, 0.1) -66.22%, rgba(202, 255, 51, 0) 85.46%);
+    border-radius: 50px;
+}
+.firstSection-card h1{
+    font-size: 24px;
+    font-weight: 300;
+}
+.mar-card p{
+    max-width: 588px;
+    height: 108px;
+    padding-left: 50px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+}
+@media (max-width:1600px){
+    .mar-protect-wrapper {
+        position: relative; 
+        margin-top: 58px !important;
+}
+.mar-protect-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0 auto;
+    justify-items: center;
+    gap: 20px;
+    padding-top: 62px;
+    padding-left: 74px;
+    padding-right: 75px;
+    z-index: 10;
+}
+.mar-card{
+    box-sizing: border-box;
+    padding: 50px;
+    gap: 24px;
+    max-width: 550px;
+    background: linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%), linear-gradient(267.5deg, #1C1C1C 40.67%, rgba(28, 28, 28, 0) 99.81%), url(asfalt-light.png);
+    background-blend-mode: normal, normal, screen;
+    border: 1px solid #262626;
+    border-radius: 20px;
+}
+.firstSection-card{
+    display: flex;
+    align-items: center;
+    max-width: 470px;
+    gap: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.img-card {
+padding: 8px;
+gap: 10px;
+width: 76px;
+height: 76px;
+background: linear-gradient(180deg, rgba(202, 255, 51, 0.05) 0%, rgba(202, 255, 51, 0) 100%);
+border-radius: 70px;
+}
+.img-card img{
+box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 16px;
+gap: 10px;
+width: 60px;
+height: 60px;
+background: linear-gradient(180deg, rgba(202, 255, 51, 0.1) -66.22%, rgba(202, 255, 51, 0) 85.46%);
+border-radius: 50px;
+}
+.firstSection-card h1{
+    font-size: 18px;
+    font-weight: 300;
+}
+.mar-card p{
+    max-width: 440px;
+    height: 108px;
+    padding-left: 50px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 150%;
+}
+}
+@media (max-width: 1100px) {
+
+    .mar-protect-grid {
+        grid-template-columns: 1fr; 
+        padding-left: 40px;  
+        padding-right: 40px;
+        gap: 20px;
+    }
+
+    .backGround {
+        width: 100%;
+        height: 100%;
+    }
+    .mar-card p {
+        max-width: 100%; 
+        height: auto;    
+        padding-left: 20px;
+    }
+    
+    .firstSection-card h1 {
+        max-width: 100%; 
+        font-size: 22px; 
+    }
+}
+
+
+@media (max-width:390px){
+    .mar-protect-wrapper {
+        position: relative; 
+        margin-top: 40px !important;
+        
+}
+.mar-protect-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top:0px ;
+    padding-left: 16px;
+    padding-right: 16px;
+    z-index: 10;
+}
+.backGround{
+    width: 0;
+}
+.mar-card{
+    box-sizing: border-box;
+    padding: 14px;
+    max-width: 358px;
+    background: linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%), linear-gradient(267.5deg, #1C1C1C 40.67%, rgba(28, 28, 28, 0) 99.81%), url(asfalt-light.png);
+    background-blend-mode: normal, normal, screen;
+    border: 1px solid #262626;
+    border-radius: 20px;
+}
+.firstSection-card{
+    display: flex;
+    align-items: center;
+    max-width: 310px;
+    gap: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.img-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px;
+    gap: 10px;
+
+    width: 68px;
+    height: 68px;
+
+    background: linear-gradient(180deg, rgba(202, 255, 51, 0.05) 0%, rgba(202, 255, 51, 0) 100%);
+    border-radius: 70px;
+}
+.img-card img{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 14px;
+    gap: 10px;
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(180deg, rgba(202, 255, 51, 0.1) -66.22%, rgba(202, 255, 51, 0) 85.46%);
+    border-radius: 50px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.firstSection-card h1{
+
+    max-width: 200px;
+    font-weight: 200;
+    font-size: 18px;
+    flex: none;
+}
+.mar-card p{
+    max-width: 310px;
+    height: 108px;
+    padding-left: 20px;
+    font-weight: 300;
+    font-size: 12px;
+}
+}
