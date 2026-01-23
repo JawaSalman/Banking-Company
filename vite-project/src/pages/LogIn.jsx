@@ -1,10 +1,11 @@
 import OurTestimonials from "../components/Shared components/OurTestimonials/OurTestimonials"
+import Login from "../components/Login/Login"
 
 const LogIn = () => {
     return (
         <div>
+            <Login/>
             <OurTestimonials />
-
         </div>
     )
 }
