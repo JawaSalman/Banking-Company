@@ -21,7 +21,6 @@ nav {
 
     ul {
         display: flex;
-        width: 24%;
         gap: 26px;
 
 
@@ -129,40 +128,42 @@ nav {
             display: block;
         }
 
-        .js_mobile_list_container {
+        /* .js_mobile_list_container { */
 
-            position: relative;
+        .js_mobile_list {
+            padding-top: 50px;
+            background-color: rgba(32, 32, 32, 0.452);
+            backdrop-filter: blur(10px);
+            height: 100vh;
+            width: 100vw;
+            line-height: 400%;
+            text-align: center;
+            border-radius: 10px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+            z-index: 6;
+            transform: translateX(100%);
+            transition: all 0.3s ease-in-out;
 
 
-            .js_mobile_list {
-                background-color: var(--primary-color);
-                line-height: 230%;
-                text-align: center;
-                width: 24vw;
-                border-radius: 10px;
-                position: absolute;
-                top: -55px;
-                right: -30vw;
-                transition: var(--transition);
-                display: none;
-                z-index: 3;
-
-                li:not(:last-child) {
-                    border-bottom: 1px solid #2626262a;
-                }
-
-                a {
-                    color: var(--text-button-dark-);
-                }
+            li:not(:last-child) {
+                border-bottom: 1px solid #2626262a;
             }
 
-            .js_slide_nav_list {
-                display: block;
-                right: 8vw;
+            a {
+                color: var(--primary-color);
 
             }
-
         }
+
+        .js_slide_nav_list {
+            display: block;
+            transform: translateX(0);
+        }
+
+        /* } */
     }
 
 }

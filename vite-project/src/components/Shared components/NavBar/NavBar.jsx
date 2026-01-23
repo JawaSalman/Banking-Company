@@ -30,7 +30,7 @@ const NavBar = ({ logo, items, btn, smallBtn }) => {
                 </div>
                 <button className="js_mobile_nav js_mobile_button" onClick={moveNavBar}><img src={smallBtn} className="js_strokes" /></button>
             </nav>
-            <div className="js_mobile_nav js_mobile_list_container">
+            {/* <div className="js_mobile_nav js_mobile_list_container"> */}
                 <ul className={`js_mobile_nav js_mobile_list ${js_isOpen ? 'js_slide_nav_list' : ''}`}>
                     {items.map((item, index) => {
                         return (
@@ -52,7 +52,7 @@ const NavBar = ({ logo, items, btn, smallBtn }) => {
                         </NavLink>
                     </li>
                 </ul>
-            </div>
+            {/* </div> */}
         </>
     )
 }

@@ -56,11 +56,16 @@
     }
 
     .js-faqs-loadall-btn {
+        background-color: var(--primary-color);
+        color: var(--text-button-dark-);
         min-width: 11vw;
         border-radius: 100px;
-        gap: 4px;
         padding: 18px 24px;
         margin-top: 10px;
+
+        img {
+            margin-left: 5px;
+        }
     }
 
     .js-btn-hide {
