@@ -10,8 +10,8 @@ const Careers = () => {
             <section>
                 <OurValues />
                 <OurBenefits />
-                <FAQs />
                 <JobOpenings />
+                <FAQs />
                 <FinancialCTA />
             </section>
         </>
