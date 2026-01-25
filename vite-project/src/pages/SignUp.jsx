@@ -1,5 +1,5 @@
 import OurTestimonials from "../components/Shared components/OurTestimonials/OurTestimonials"
-import Sign from "../components/Shared components/Sign/Sign"
+import Sign from "../components/LoginSignup/Signup"
 
 const SignUp = () => {
     return (

@@ -1,5 +1,6 @@
 import OurTestimonials from "../components/Shared components/OurTestimonials/OurTestimonials"
-import Login from "../components/Login components/Login/Login"
+import Login from "../components/LoginSignup/Login"
+
 const LogIn = () => {
     return (
         <div>
