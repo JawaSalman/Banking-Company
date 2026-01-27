@@ -148,7 +148,7 @@ height: 349px;
 right: 0px;
 top: calc(50% - 349px/2 - 0.5px);
 
-background: linear-gradient(270deg, #191919 10.8%, rgba(25, 25, 25, 0) 105.84%);
+background: linear-gradient(270deg, #1A1A1A 10.8%, rgba(25, 25, 25, 0) 105.84%);
 mix-blend-mode: normal;
 flex: none;
 order: 4;

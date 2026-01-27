@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
     return (
-        <footer className='container flex-center flex-col'>
+        <footer className=' flex-center flex-col'>
             <div className="js_logo_url_cnt flex-center flex-col">
                 <img src={logo} className="js_logo" />
                 <ul>
@@ -21,10 +21,10 @@ const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
             <div className="js_mail_num_loc_cnt flex-center ">
                 {contact.map((contact, index) => {
                     return (
-                        <p key={index}>
+                        <div className='js_pic_text_align' key={index}>
                             <img src={contact.icon} className='js-footer-icons' />
-                            {contact.content}
-                        </p>
+                            <p>{contact.content}</p>
+                        </div>
                     )
                 })}
             </div>

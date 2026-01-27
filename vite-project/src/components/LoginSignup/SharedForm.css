@@ -15,9 +15,8 @@
   border-radius: 20px;
 
 
-
-  background: url("/Images/LoginPage/Texture Background.webp"), rgb(16, 16, 16, 1);
-  background-blend-mode: overlay, normal;
+  background: url("/Images/LoginPage/Texture Background.webp"), #1c1c1c;
+  background-blend-mode: saturation;
   background-size: cover;
   background-position: center;
   border: 1px solid #262626;
