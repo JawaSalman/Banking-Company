@@ -1,9 +1,11 @@
 .js_FAQs_section {
-    margin: 160px 8.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 160px auto;
+    width: 95%;
+    max-width: 1596px;
 
     h1 {
         font-size: 48px;
@@ -21,15 +23,17 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 20px;
         position: relative;
 
         .js-faqs-card-cont {
-            width: 38vw;
-            min-height: 350px;
+            min-height: 300px;
+            max-height: 347px;
             border-radius: 14px;
             border: 1px solid #262626;
             padding: 50px;
+            max-width: 782px;
+            width: 49%;
 
 
             h2 {
@@ -47,7 +51,7 @@
         }
 
         .js-black-shadow-cont {
-            width: 94%;
+            width: 99%;
             height: 60vh;
             background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #191919 100%);
             position: absolute;
@@ -76,10 +80,10 @@
 }
 
 
-
 @media (max-width: 1440px) {
     .js_FAQs_section {
-        margin: 120px 5.6vw;
+        /* margin: 120px 5.6vw; */
+        max-width: 1279px;
 
         h1 {
             font-size: 38px;
@@ -91,10 +95,8 @@
         }
 
         .js-faqs-cont {
-            gap: 20px;
-
             .js-faqs-card-cont {
-                width: 43vw;
+                max-width: 629.5px;
                 min-height: 300px;
                 padding: 40px;
 
@@ -109,10 +111,6 @@
                 }
 
             }
-
-            .js-black-shadow-cont {
-                width: 99%;
-            }
         }
     }
 
@@ -121,26 +119,31 @@
 
 @media (max-width : 992px) {
     .js_FAQs_section {
-        margin: 100px 4vw;
 
         h1 {
             font-size: 28px;
-            text-align: center;
+            align-self: center;
         }
 
         p {
+            align-self: center;
             font-size: 14px;
-            text-align: center;
             margin: 10px 0 50px;
 
         }
 
         .js-faqs-cont {
+            flex-direction: column;
+            align-items: center;
 
             .js-faqs-card-cont {
                 width: 90vw;
                 padding: 30px;
 
+            }
+
+            .js-black-shadow-cont {
+                max-width: 629.5px;
             }
 
         }

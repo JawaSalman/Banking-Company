@@ -3,7 +3,20 @@ import "./OurValues.css";
 import OurValuesCard from "./OurValuesCard";
 import OurValuesTitle from "./ourValuesTitle";
 import { CardData } from "./OurValuesCardData";
+import { useEffect, useState } from "react";
+
+const STORAGE_KEY = "tableData-2-0";
+
 const OurValues = () => {
+    const [ourValues, setOurValues] = useState(() => {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        return saved ? JSON.parse(saved) : CardData;
+    });
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(ourValues));
+    }, [ourValues]);
+
     return (
         <section className="section-margin ma-ourValues-section">
             <OurValuesTitle
@@ -12,7 +25,7 @@ const OurValues = () => {
                 subTitle="At YourBank, our values form the foundation of our organization and guide our actions. We believe in upholding the highest standards of integrity, delivering exceptional service, and embracing innovation. These values define our culture and shape the way we work together to achieve our goals."
             />
             <div className="ma-values-grid ma-ov-container">
-                {CardData.map((item) => (
+                {ourValues.map((item) => (
                     <OurValuesCard
                         key={item.id}
                         title={item.title}

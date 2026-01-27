@@ -6,13 +6,14 @@
 
 /*  Login Page Container  */
 .mh-login-page {
-  margin: 198px 297px 150px; 
+  margin: 198px 297px 150px;
   padding: 100px 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   border-radius: 20px;
+
 
 
   background: url("/Images/LoginPage/Texture Background.webp"), rgb(16, 16, 16, 1);
@@ -117,7 +118,7 @@
 }
 
 /*  Buttons  */
-.mh-loginOrSignup{
+.mh-loginOrSignup {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,7 +202,7 @@
   border-radius: 70px;
   padding: 12px;
   background: linear-gradient(180deg, rgba(202, 255, 51, 0.05) 0%, rgba(202, 255, 51, 0) 100%);
-  
+
 }
 
 .mh-social-icon::before {
@@ -235,7 +236,7 @@
     padding: 80px 200px;
   }
 
-  .mh-login-page .mh-mainTexture{
+  .mh-login-page .mh-mainTexture {
     width: 256px;
     height: 243px;
   }
@@ -250,24 +251,28 @@
     margin-bottom: 60px;
   }
 
-  .mh-inputs, .mh-signin-inputs, .mh-auth-inputs {
+  .mh-inputs,
+  .mh-signin-inputs,
+  .mh-auth-inputs {
     gap: 24px;
     margin-bottom: 30px;
   }
 
-  .mh-inputs input, .mh-signin-inputs input, .mh-auth-inputs input {
+  .mh-inputs input,
+  .mh-signin-inputs input,
+  .mh-auth-inputs input {
     height: 64px;
     padding: 20px;
   }
 
   .mh-password-wrapper {
-  width: 100%;
-}
+    width: 100%;
+  }
 
   .mh-password-wrapper input {
     height: 64px;
-    padding: 20px; 
-    
+    padding: 20px;
+
   }
 
   .mh-password-eye {
@@ -297,7 +302,7 @@
     padding-top: 14px 24px;
   }
 
-  .mh-btn-signup a{
+  .mh-btn-signup a {
     font-size: 14px;
   }
 
@@ -334,10 +339,13 @@
     height: 24px;
   }
 }
-@media screen and (max-width:1260px){
-.mh-auth-inputs {
-  grid-template-columns: 1fr ;}
+
+@media screen and (max-width:1260px) {
+  .mh-auth-inputs {
+    grid-template-columns: 1fr;
+  }
 }
+
 @media screen and (max-width:992px) {
   .mh-login-page {
     margin: 138px 16px 80px;
@@ -345,8 +353,8 @@
     padding: 30px;
   }
 
-  .mh-login-page .mh-mainTexture{
-    width:167px;
+  .mh-login-page .mh-mainTexture {
+    width: 167px;
     height: 159px;
   }
 
@@ -360,12 +368,16 @@
     margin-bottom: 40px;
   }
 
-  .mh-inputs, .mh-signin-inputs, .mh-auth-inputs {
+  .mh-inputs,
+  .mh-signin-inputs,
+  .mh-auth-inputs {
     gap: 20px;
     margin-bottom: 24px;
   }
 
-  .mh-inputs input, .mh-signin-inputs input, .mh-auth-inputs input {
+  .mh-inputs input,
+  .mh-signin-inputs input,
+  .mh-auth-inputs input {
     height: 56px;
     padding: 16px;
     max-width: 100%;
@@ -377,7 +389,7 @@
 
   .mh-password-wrapper input {
     height: 56px;
-    padding: 16px; 
+    padding: 16px;
   }
 
   .mh-password-eye {
@@ -390,17 +402,17 @@
   }
 
   .mh-btn-login {
-      width: 100%;
-      max-width: 298px;
+    width: 100%;
+    max-width: 298px;
     margin-top: 24px;
   }
 
   .mh-btn-signup {
-      width: 100%;
-      max-width: 298px;
+    width: 100%;
+    max-width: 298px;
   }
 
-  .mh-btn-signup a{
+  .mh-btn-signup a {
     font-size: 14px;
   }
 
@@ -409,6 +421,6 @@
   }
 
   .mh-divider p {
-   font-size: 13px;
+    font-size: 13px;
   }
 }

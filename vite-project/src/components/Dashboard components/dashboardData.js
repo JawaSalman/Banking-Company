@@ -1,4 +1,4 @@
-// ================================
+      // ================================
 // Website Pages Definition
 // ================================
 export const pages = [
@@ -62,6 +62,8 @@ export const tableSchemas = {
     '1-1': ['title', 'text'],
 
     // FAQs table (Home page)
-    '1-2': ['question', 'answer']
+    '1-2': ['question', 'answer'],
 
+    // Features table (Home page)
+    '2-0': ['title', 'paragraph']
 };
