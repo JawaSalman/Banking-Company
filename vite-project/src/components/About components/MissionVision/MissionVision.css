@@ -1,6 +1,8 @@
 .ma-mission-vision-container {
-  margin: 0 162px;
+  margin: 0 auto;
   margin-top: 150px;
+  width: 95%;
+  max-width: 1596px;
 }
 
 /* Header */
@@ -24,7 +26,7 @@
 
 .ma-item:nth-child(odd) {
   flex-direction: row-reverse;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .ma-item:nth-child(even) {
@@ -34,22 +36,21 @@
 /* Item Data */
 .ma-item-data {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .ma-item:nth-child(odd) .ma-item-data {
   margin-top: 207px;
   margin-bottom: 200px;
   padding-left: 40px;
-border-left: 1px solid var(--primary-color);
-
-
+  border-left: 1px solid var(--primary-color);
 }
 
 .ma-item:nth-child(even) .ma-item-data {
   padding-right: 50px;
-   margin-bottom: 200px;
-  border-right: 1px solid var(--primary-color)
-
+  margin-bottom: 0px;
+  border-right: 1px solid var(--primary-color);
 }
 
 /* Image Wrapper */
@@ -60,18 +61,15 @@ border-left: 1px solid var(--primary-color);
   align-items: end;
   width: 664px;
   height: 621px;
+  flex-shrink: 0;
   border-radius: 50px 50px 20px 20px;
   border: 1px solid #262626;
-  background: linear-gradient(
-      267.5deg,
+  background: linear-gradient(267.5deg,
       #1C1C1C 40.67%,
-      rgba(28, 28, 28, 0) 99.81%
-    ),
-    linear-gradient(
-      106.06deg,
+      rgba(28, 28, 28, 0) 99.81%),
+    linear-gradient(106.06deg,
       rgba(202, 255, 51, 0.05) -29.45%,
-      rgba(202, 255, 51, 0) 27.86%
-    );
+      rgba(202, 255, 51, 0) 27.86%);
 }
 
 .ma-item:nth-child(even) .ma-image-wrapper {
@@ -112,8 +110,9 @@ border-left: 1px solid var(--primary-color);
 ======================= */
 @media screen and (max-width: 1440px) {
   .ma-mission-vision-container {
-    margin: 0 80px;
     margin-top: 120px;
+    max-width: 1280px;
+    width: 88.8%;
   }
 
   .ma-title {
@@ -125,10 +124,13 @@ border-left: 1px solid var(--primary-color);
     font-size: 16px;
   }
 
+  .ma-item:nth-child(odd) {
+    margin-top: 60px;
+  }
+
   .ma-item:nth-child(odd) .ma-item-data {
     margin-top: 161px;
   }
-  
 
   .ma-image-wrapper {
     width: 545px;
@@ -164,10 +166,9 @@ border-left: 1px solid var(--primary-color);
 ======================= */
 @media screen and (max-width: 992px) {
   .ma-mission-vision-container {
-    margin: 0 16px;
+    width: 91.5%;
     margin-top: 80px;
     text-align: center;
-    
   }
 
   .ma-item,
@@ -187,8 +188,7 @@ border-left: 1px solid var(--primary-color);
 
   .ma-image-wrapper {
     width: 100%;
-    height:329px
-
+    height: 329px;
   }
 
   .ma-bg-image {
@@ -197,7 +197,6 @@ border-left: 1px solid var(--primary-color);
   }
 
   .ma-item-image {
-    
     object-fit: contain;
     object-position: bottom center;
     margin-top: 20px;
@@ -213,9 +212,9 @@ border-left: 1px solid var(--primary-color);
     padding-top: 30px;
     padding-left: 0;
     padding-right: 0;
-    border-left:none ;
+    border-left: none;
     border-right: none;
-    border-top: 1px solid var(--primary-color)
+    border-top: 1px solid var(--primary-color);
   }
 
   .ma-item:nth-child(even) {

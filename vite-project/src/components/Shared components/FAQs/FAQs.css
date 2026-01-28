@@ -27,13 +27,21 @@
         position: relative;
 
         .js-faqs-card-cont {
+<<<<<<< Updated upstream
             min-height: 300px;
             max-height: 347px;
+=======
+            min-height: 350px;
+>>>>>>> Stashed changes
             border-radius: 14px;
             border: 1px solid #262626;
             padding: 50px;
             max-width: 782px;
+<<<<<<< Updated upstream
             width: 49%;
+=======
+            width: 48.5%;
+>>>>>>> Stashed changes
 
 
             h2 {

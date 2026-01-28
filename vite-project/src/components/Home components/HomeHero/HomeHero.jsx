@@ -1,10 +1,10 @@
-// Import reusable IconText component
+
 import IconText from "../../Shared components/IconText/IconText"
-// Import component-specific styles
+
 import "./HomeHero.css"
-// Import Link for client-side navigation (React Router)
+
 import { Link } from "react-router-dom"
-// Import hero data
+
 import homeHeroData from "./HomeHeroData"
 
 const HomeHero = () => {

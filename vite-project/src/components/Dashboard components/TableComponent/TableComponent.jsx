@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { tableSchemas } from "../dashboardData";
 import "./TableComponent.css";
@@ -8,7 +7,7 @@ import "./TableComponent.css";
  * --------------
  * A dynamic, reusable table component that:
  * - Changes columns based on active page & section
- * - Supports CRUD-like operations (Add, Edit)
+ * - Supports CRUD operations (Add, Edit, Delete)
  * - Persists data in localStorage
  *
  * Props:
@@ -101,6 +100,17 @@ const TableComponent = ({ activePage, activeSection }) => {
   const handleCancel = () => {
     setEditingId(null);
     setEditedData({});
+  };
+
+  /**
+   * Delete a row
+   */
+  const handleDelete = (id) => {
+    if (window.confirm('Are you sure you want to delete this row?')) {
+      const updatedRows = rows.filter(row => row.id !== id);
+      setRows(updatedRows);
+      localStorage.setItem(storageKey, JSON.stringify(updatedRows));
+    }
   };
 
   /**
@@ -224,12 +234,20 @@ const TableComponent = ({ activePage, activeSection }) => {
                       </button>
                     </>
                   ) : (
-                    <button
-                      className="ma-btn ma-btn-edit"
-                      onClick={() => handleEdit(row)}
-                    >
-                      Edit
-                    </button>
+                    <>
+                      <button
+                        className="ma-btn ma-btn-edit"
+                        onClick={() => handleEdit(row)}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="ma-btn ma-btn-delete"
+                        onClick={() => handleDelete(row.id)}
+                      >
+                        Delete
+                      </button>
+                    </>
                   )}
                 </td>
               </tr>

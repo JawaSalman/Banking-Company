@@ -30,7 +30,7 @@
     0 0 30px rgba(202, 255, 51, 0.08);
 }
 
-/* رؤوس الأعمدة */
+
 .ma-table thead th {
   padding: 18px;
   background: var(--lighter-bg);
@@ -88,7 +88,7 @@
     0 0 30px rgba(202, 255, 51, 0.08);
 }
 
-/* تنسيقات التعديل */
+
 .ma-input-edit {
   width: 100%;
   padding: 10px 12px;
@@ -104,11 +104,7 @@
   transition: var(--transition);
 }
 
-.ma-input-edit:focus {
-  outline: none;
-  border-color: rgba(202, 255, 51, 0.5);
-  box-shadow: 0 0 0 3px rgba(202, 255, 51, 0.1);
-}
+
 
 .ma-input-edit::placeholder {
   color: var(--text-light);
@@ -169,6 +165,11 @@
   background: rgba(202, 255, 51, 0.05);
 
 }
+.ma-btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
 
 
 

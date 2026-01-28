@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +6,11 @@
 
 /* ================= Benefits Section ================= */
 .mh-benefits {
+   margin: 0 auto;
   background-color: #1A1A1A;
   color: #ffffff;
-  padding: 0px 162px;
+  width: 95%;
+  max-width: 1596px;
   margin-bottom: 150px;
   font-family: 'Lexend';
 }
@@ -40,9 +41,52 @@
 
 /* ================= Benefits Grid ================= */
 .mh-benefits-grid {
+    --grid-center: 44%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mh-card:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(var(--grid-center) - 50%);
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15) 0px,
+    rgba(255, 255, 255, 0.15) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+
+.mh-benefits-grid::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.15) 0px,
+    rgba(255, 255, 255, 0.15) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* ================= Benefits Card ================= */
@@ -52,12 +96,9 @@
   border-radius: 20px 50px 20px 50px;
   background: linear-gradient(267.5deg, #1C1C1C 40.67%, rgba(28, 28, 28, 0) 99.81%),
 linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%);
-
   border: 1px solid #1C1C1C; 
-  overflow: hidden;
-  z-index: 0;
+  z-index: 2;
 }
-
 
 /* ================= Benefits Cards with different border-radius ================= */
 .mh-benefits-grid .mh-card:nth-child(1) {
@@ -105,7 +146,6 @@ linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 
   background: linear-gradient(180deg, rgba(202, 255, 51, 0.1) -66.22%, rgba(202, 255, 51, 0) 85.46%);
   border: 1px solid;
   border-image-source: linear-gradient(180deg, rgba(202, 255, 51, 0.2) -173.65%, rgba(202, 255, 51, 0) 87.22%);
-  
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -139,7 +179,8 @@ linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 
 /* ================= Responsive 1440px ================= */
 @media screen and (max-width:1440px) {
   .mh-benefits {
-    padding: 0px 80px;
+       max-width: 1280px;
+    width: 88.8%;
     margin-bottom: 120px;
   }
 
@@ -160,6 +201,7 @@ linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 
   .mh-benefits-grid {
     gap: 60px;
   }
+
 
   .mh-card {
     border-radius: 14px 40px 14px 40px;
@@ -199,7 +241,8 @@ linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 
 /* ================= Responsive 992px ================= */
 @media screen and (max-width:992px) {
   .mh-benefits {
-    padding: 0px 16px;
+       width: 91.5%;
+    margin-top: 80px;
     margin-bottom: 80px;
   }
 
@@ -221,6 +264,12 @@ linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 
   .mh-benefits-grid {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  /* إخفاء الخطوط على الموبايل */
+  .mh-benefits-grid::before,
+  .mh-benefits-grid::after {
+    display: none;
   }
 
   .mh-card {

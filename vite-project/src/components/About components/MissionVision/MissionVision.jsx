@@ -38,7 +38,7 @@ const MissionVision = () => {
   const { background, title, description } = missionVisionData;
 
   return (
-    <div className="ma-mission-vision-container">
+    <section className="ma-mission-vision-container">
       
       {/* Header section with title and description */}
       <div className="ma-header">
@@ -76,7 +76,7 @@ const MissionVision = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
