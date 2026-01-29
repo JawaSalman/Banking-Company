@@ -41,13 +41,15 @@
 
 /* ================= Benefits Grid ================= */
 .mh-benefits-grid {
-    --grid-center: 44%;
+  --grid-center: 44%;
+  --row-gap: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
+  gap: var(--row-gap);
   position: relative;
   overflow: hidden;
 }
+
 
 .mh-card:nth-child(even)::before {
   content: "";
@@ -55,12 +57,12 @@
   top: 0;
   left: calc(var(--grid-center) - 50%);
   transform: translateX(-50%);
-  width: 1px;
+  width: 1.5px;
   height: 100%;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.15) 0px,
-    rgba(255, 255, 255, 0.15) 10px,
+    #262626 0px,
+    #262626 10px,
     transparent 10px,
     transparent 20px
   );
@@ -70,24 +72,26 @@
 
 
 
-.mh-benefits-grid::after {
+.mh-card:nth-child(1)::after {
   content: "";
   position: absolute;
-  top: 50%;
   left: 0;
-  transform: translateY(-50%);
-  width: 100%;
+  bottom: calc(var(--row-gap) / -2);
+  width: calc(200% + var(--row-gap));
   height: 1px;
+
   background: repeating-linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.15) 0px,
-    rgba(255, 255, 255, 0.15) 10px,
+    #262626 0px,
+    #262626 10px,
     transparent 10px,
     transparent 20px
   );
+
   z-index: 1;
   pointer-events: none;
 }
+
 
 /* ================= Benefits Card ================= */
 .mh-card {
@@ -96,8 +100,45 @@
   border-radius: 20px 50px 20px 50px;
   background: linear-gradient(267.5deg, #1C1C1C 40.67%, rgba(28, 28, 28, 0) 99.81%),
 linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%);
-  border: 1px solid #1C1C1C; 
+  border: 1px solid;
+
+border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba(38, 38, 38, 0) 17.02%, rgba(38, 38, 38, 0) 68.88%, rgba(38, 38, 38, 0.8) 100%);
   z-index: 2;
+  /* overflow: hidden; */
+}
+
+.mh-card .mh-card-bachground{
+    position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  transform: scale(1);
+ mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,   
+    rgba(0, 0, 0, 0) 100%  
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  
+}
+
+.mh-card:nth-child(1) .mh-card-bachground,
+.mh-card:nth-child(4) .mh-card-bachground
+{
+  border-radius: 50px 20px 50px 20px;
+}
+
+.mh-card:nth-child(2) .mh-card-bachground,
+.mh-card:nth-child(3) .mh-card-bachground
+{
+  border-radius: 20px 50px 20px 50px;
 }
 
 /* ================= Benefits Cards with different border-radius ================= */
@@ -198,15 +239,22 @@ linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 
     font-size: 16px;
   }
 
-  .mh-benefits-grid {
-    gap: 60px;
-  }
+ .mh-benefits-grid {
+  --row-gap: 60px;
+  gap: var(--row-gap);
+}
 
 
   .mh-card {
     border-radius: 14px 40px 14px 40px;
     padding: 40px;
   }
+
+  .mh-card .mh-card-bachground
+{
+  border-radius: 14px 40px 14px 40px;
+}
+
 
   .mh-card-head {
     gap: 14px;
@@ -261,20 +309,48 @@ linear-gradient(106.06deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 
     text-align: center;
   }
 
-  .mh-benefits-grid {
+   .mh-benefits-grid {
+    --row-gap: 48px;
+    gap: var(--row-gap);
     grid-template-columns: 1fr;
-    gap: 48px;
   }
 
-  /* إخفاء الخطوط على الموبايل */
-  .mh-benefits-grid::before,
-  .mh-benefits-grid::after {
-    display: none;
+.mh-benefits-grid > .mh-card::before {
+  content: none;
+  display: none; /* إخفاء الخط العمودي */
+}
+
+    /* الخطوط الأفقية تحت الكاردات 1، 2، 3 فقط */
+  .mh-benefits-grid > .mh-card:nth-child(-n+3)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: calc(var(--row-gap)/-2);
+    width: 100%;
+    height: 1px;
+    background: repeating-linear-gradient(
+      to right,
+       #262626 0px,
+      #262626 10px,
+      transparent 10px,
+      transparent 20px
+    );
+    z-index: 1;
+    display: block;
   }
+
+
 
   .mh-card {
     padding: 24px;
+    border-radius: 40px 40px 14px 14px !important;
+
   }
+  
+    .mh-card .mh-card-bachground
+{
+  border-radius: 40px 40px 14px 14px !important;
+}
 
   .mh-card-head {
     margin-bottom: 20px;

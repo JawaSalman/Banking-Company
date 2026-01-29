@@ -59,11 +59,11 @@ export const tableSchemas = {
     '3-1': ['title', 'text'],
 
     // Features table (Home page)
-    '1-1': ['title', 'text'],
+    '1-1': ['title', 'description'],
 
     // FAQs table (Home page)
     '1-2': ['question', 'answer'],
 
-    // Features table (Home page)
-    '2-0': ['title', 'paragraph']
+    // OurBenefits (Careers Page)
+    '2-1': ['title', 'description']
 };

@@ -5,6 +5,7 @@ import UseCase from "../components/Home components/UseCases/UseCase/UseCase"
 import FinancialCTA from "../components/Shared components/FinancialCTA/FinancialCTA"
 import HomeHero from "../components/Home components/HomeHero/HomeHero"
 import OurFeatures from "../components/Home components/OurFeatures/OurFeatures"
+import ButtonToUp from "../components/Shared components/ButtonToUp/ButtonToUp"
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <FAQs />
         <OurTestimonials />
         <FinancialCTA />
+        <ButtonToUp />
       </section>
     </>
   )

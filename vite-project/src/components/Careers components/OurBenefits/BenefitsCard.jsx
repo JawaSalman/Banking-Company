@@ -1,6 +1,7 @@
-const BenefitsCard = ({ image, title, desc }) => {
+const BenefitsCard = ({ image, title, description }) => {
   return (
     <div className="mh-card">
+      <img src="/Images/CareersPage/background.png" alt="" className="mh-card-bachground" />
       <div className="mh-card-head">
         <span className="mh-card-icon">
           <img src={image} alt={title} />
@@ -9,7 +10,7 @@ const BenefitsCard = ({ image, title, desc }) => {
         <h3 className="mh-card-title">{title}</h3>
       </div>
 
-      <p className="mh-card-desc">{desc}</p>
+      <p className="mh-card-desc">{description}</p>
     </div>
   );
 };

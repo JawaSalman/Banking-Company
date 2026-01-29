@@ -91,6 +91,7 @@
     border: 1px solid #262626;
     border-radius: 12px;
     padding: 50px;
+    min-height: 272px;
 }
 
 
@@ -109,8 +110,8 @@
 
 .mh-arrow {
     color: #b6ff3c;
-    width: 34px;
-    height: 34px;
+    width: 18.42px;
+    height: 18.42px;
 }
 
 /* ================= Features Section Card Text ================= */
@@ -158,6 +159,7 @@
     .mh-feature-card {
     border-radius: 10px;
     padding: 40px;
+    min-height: 227px;
     }
     .mh-card-header {
     margin-bottom: 24px;
@@ -166,8 +168,8 @@
     font-size: 18px;
     }
     .mh-arrow {
-    width: 24px;
-    height: 24px;
+    width: 13px;
+    height: 13px;
     }
     .mh-feature-card p {
     font-size: 16px;
@@ -218,6 +220,7 @@
     }
     .mh-feature-card {
     padding: 30px;
+    min-height: 212px;
     }
     .mh-card-header {
     margin-bottom: 20px;

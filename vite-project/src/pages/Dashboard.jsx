@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import TabsComponent from '../components/Dashboard components/TabsComponent/TabsComponent';
 import TableComponent from '../components/Dashboard components/TableComponent/TableComponent';
+import ButtonToUp from '../components/Shared components/ButtonToUp/ButtonToUp';
   
 const Dashboard = () => {
   const [pageId, setPageId] = useState(null);
@@ -20,6 +21,8 @@ const Dashboard = () => {
         activePage={pageId}
         activeSection={sectionId}
       />
+
+      <ButtonToUp />
     </div>
   );
 };

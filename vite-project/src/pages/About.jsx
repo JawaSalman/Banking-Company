@@ -1,6 +1,7 @@
 import MissionVision from '../components/About components/MissionVision/MissionVision'
 import PressReleasesSection from '../components/About components/PressReleases/PressReleasesSection/PressReleasesSection'
 import Hero from '../components/Careers components/Hero/Hero'
+import ButtonToUp from '../components/Shared components/ButtonToUp/ButtonToUp'
 
 const About = () => {
     return (
@@ -12,6 +13,7 @@ const About = () => {
             </Hero>
             <MissionVision />
             <PressReleasesSection />
+            <ButtonToUp />
 
         </div>
     )

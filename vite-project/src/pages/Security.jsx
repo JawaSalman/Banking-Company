@@ -1,6 +1,7 @@
 
 import Hero from '../components/Careers components/Hero/Hero'
 import HowProtectYou from '../components/Security components/HowProtectYou'
+import ButtonToUp from '../components/Shared components/ButtonToUp/ButtonToUp'
 import FAQs from '../components/Shared components/FAQs/FAQs'
 
 const Security = () => {
@@ -12,6 +13,7 @@ const Security = () => {
             </Hero>
             <HowProtectYou />
             <FAQs />
+            <ButtonToUp />
         </div>
     )
 }
