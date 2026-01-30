@@ -44,20 +44,22 @@ nav {
         display: flex;
         align-items: center;
         gap: 30px;
+        font-size: 18px;
+        line-height: 150%;
 
         a {
             color: var(--text-white);
         }
 
         button {
+            font-size: 18px;
+            padding: 14px 30px;
+            border-radius: 82px;
+            background-color: var(--primary-color);
+
             a {
                 color: var(--text-button-dark-);
-
             }
-
-            border-radius: 82px;
-            padding: 14px 30px;
-            background-color: var(--primary-color);
 
         }
     }

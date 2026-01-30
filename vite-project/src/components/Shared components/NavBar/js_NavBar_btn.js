@@ -2,7 +2,7 @@ const btn = [{
     content: "Sign Up",
     href: "/signup"
 }, {
-    content: "Log In",
+    content: "Login",
     href: "/login"
 }]
 
