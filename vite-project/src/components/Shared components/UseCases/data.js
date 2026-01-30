@@ -16,6 +16,24 @@ const productData=[{
     tittle:"Education Funding",
 },
 ]
+const businessData=[{
+    icon:"/Images/HomePage/Startups and Entrepreneurs.png",
+    tittle:"Startups and Entrepreneurs",
+},
+{
+    icon:"/Images/HomePage/Cash Flow Management.png",
+    tittle:"Cash Flow Management",
+},
+{
+    icon:"/Images/HomePage/Business Expansion.png",
+    tittle:"Business Expansion",
+},
+{
+    icon:"/Images/HomePage/Payment Solutions.png",
+    tittle:"Payment Solutions",
+},
+]
+
 
 const product=[{
     
@@ -33,5 +51,23 @@ const product=[{
     tittle:"Reducing financial burdens",
 },
 ]
+const productbusiness=[{
+    
+    icon:"/Images/HomePage/65%.png",
+    tittle:"Cash Flow Management",
+},
+{
+    
+    icon:"/Images/HomePage/70%.png",
+    tittle:"Drive Business Expansion",
+},
+{
+    
+    icon:"/Images/HomePage/45%.png",
+    tittle:"Streamline payroll processing",
+},
+]
 export  {product}
+export {businessData}
+export {productbusiness}
 export default productData

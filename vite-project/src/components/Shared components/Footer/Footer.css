@@ -1,6 +1,12 @@
 footer {
+<<<<<<< HEAD
     bottom: 0px;
+=======
+    margin-top: 100px;
+>>>>>>> 8f4a06bad74cf25625dbd4cea83f5e0d8d651673
     background-color: var(--light-bg);
+    padding-left: 80px;
+    padding-right: 80px;
 
     .js_logo_url_cnt {
         width: 100%;
@@ -32,8 +38,13 @@ footer {
         padding: 50px 0px 50px;
         border-bottom: 1px solid var(--lighter-bg);
 
-        p {
+        .js_pic_text_align {
             display: flex;
+            align-items: center;
+
+            p {
+                color: #E4E4E7;
+            }
         }
 
         .js-footer-icons {
@@ -47,6 +58,7 @@ footer {
         padding: 16px 30px 16px 16px;
         margin: 50px 0px;
         width: 100%;
+        background-color: var(--bg-main);
 
 
         .js-sm-yellow-cont {
@@ -138,7 +150,9 @@ footer {
 
 @media (max-width: 992px) {
     footer {
-        padding: 0px 20px !important;
+        margin-top: 80px;
+        padding-left: 16px;
+        padding-right: 16px;
 
         .js_logo_url_cnt {
             padding: 50px 0px 20px;
@@ -150,7 +164,7 @@ footer {
 
             ul {
                 flex-wrap: wrap;
-                width: 60%;
+                width: 100%;
                 gap: 14px;
             }
         }
@@ -159,6 +173,16 @@ footer {
             gap: 20px;
             padding: 30px 0px;
             flex-wrap: wrap;
+
+            .js_pic_text_align {
+                p {
+                    font-size: 14px;
+                }
+
+                img {
+                    height: 17.5px;
+                }
+            }
 
             .js-footer-icons {
                 height: 14px;

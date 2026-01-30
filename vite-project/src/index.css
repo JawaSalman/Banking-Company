@@ -31,6 +31,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: lexend;
 }
 
 html {
@@ -42,7 +43,6 @@ body {
   color: var(--text-white);
   font-family: "Lexend", sans-serif;
   line-height: 1.5;
-  overflow-x: hidden;
 }
 
 input[type="submit"],
@@ -70,7 +70,6 @@ h6 {
   font-weight: 400;
 }
 
-
 p {
   color: var(--text-description);
 }
@@ -88,7 +87,6 @@ ul {
 /* --- LAYOUT & CONTAINERS --- */
 .container {
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
   padding: 0 162px;
 }
@@ -138,16 +136,4 @@ span {
 img {
   max-width: 100%;
   display: block;
-}
-
-@media (max-width: 1024px) {
-  .section-margin {
-    margin-top: 120px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section-margin {
-    margin-top: 80px;
-  }
 }

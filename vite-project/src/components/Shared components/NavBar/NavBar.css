@@ -1,11 +1,20 @@
 nav {
+    position: fixed;
     background-color: var(--light-bg);
-    width: 83vw;
+    width: 95%;
+    max-width: 1596px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 15px 34px;
     line-height: 150%;
     border-radius: 100px;
+<<<<<<< HEAD
     top: 50px;
     left: 162px;
+=======
+    top: 40px;
+    z-index: 12;
+>>>>>>> 8f4a06bad74cf25625dbd4cea83f5e0d8d651673
 
     .js_mobile_button {
         background-color: var(--primary-color);
@@ -19,7 +28,6 @@ nav {
 
     ul {
         display: flex;
-        width: 24%;
         gap: 26px;
 
 
@@ -41,16 +49,22 @@ nav {
         display: flex;
         align-items: center;
         gap: 30px;
+        font-size: 18px;
+        line-height: 150%;
 
-        p {
+        a {
             color: var(--text-white);
         }
 
         button {
-            color: var(--text-button-dark-);
-            border-radius: 82px;
+            font-size: 18px;
             padding: 14px 30px;
+            border-radius: 82px;
             background-color: var(--primary-color);
+
+            a {
+                color: var(--text-button-dark-);
+            }
 
         }
     }
@@ -63,9 +77,8 @@ nav {
 
 @media (max-width: 1440px) {
     nav {
-        width: 89vw;
+        max-width: 1596px;
         top: 30px;
-        left: 80px;
         padding: 10px 24px;
 
         .js_logo {
@@ -97,9 +110,6 @@ nav {
         max-width: 100%;
 
         nav {
-            width: 91vw;
-            top: 40px;
-            left: 16px;
             padding: 14px 14px 14px 24px;
 
             .js_logo {
@@ -125,40 +135,53 @@ nav {
             display: block;
         }
 
-        .js_mobile_list_container {
+        .js_mobile_list {
+            padding-top: 50px;
+            background-color: rgba(32, 32, 32, 0.452);
+            backdrop-filter: blur(10px);
+            height: 100vh;
+            width: 100vw;
+            line-height: 400%;
+            text-align: center;
+            border-radius: 10px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: none;
+            z-index: 12;
+            transform: translateX(100%);
+            transition: all 0.3s ease-in-out;
 
-            position: relative;
 
-
-            .js_mobile_list {
-                background-color: var(--primary-color);
-                line-height: 230%;
-                text-align: center;
-                width: 24vw;
-                border-radius: 10px;
-                position: absolute;
-                top: 110px;
-                right: -30vw;
-                transition: var(--transition);
-                display: none;
-                z-index: 3;
-
-                li:not(:last-child) {
-                    border-bottom: 1px solid #2626262a;
-                }
-
-                a {
-                    color: var(--text-button-dark-);
-                }
+            li:not(:last-child) {
+                border-bottom: 1px solid #2626262a;
             }
 
-            .js_slide_nav_list {
-                display: block;
-                right: 8vw;
+            a {
+                color: var(--primary-color);
 
             }
-
         }
-    }
 
+        .js_btn_close_nav {
+            display: none;
+            position: fixed;
+            top: 4vh;
+            right: 3vw;
+            z-index: 13;
+            background-color: var(--primary-color);
+            border-radius: 30px;
+
+            img {
+                width: 32px;
+            }
+        }
+
+        .js_slide_nav_list {
+            display: block;
+            transform: translateX(0);
+        }
+
+
+    }
 }

@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
 import './NavBar.css'
 import { useState } from "react"
+import closeNav from '/Images/HomePage/Close.svg'
 
 const NavBar = ({ logo, items, btn, smallBtn }) => {
     const [js_isOpen, js_setOpen] = useState(false)
@@ -25,12 +26,17 @@ const NavBar = ({ logo, items, btn, smallBtn }) => {
                     })}
                 </ul>
                 <div className="js_signUp_logIn">
-                    <p>{btn[0].content}</p>
-                    <button> {btn[1].content} </button>
+                    <p> <NavLink to={btn[0].href} >{btn[0].content}</NavLink> </p>
+                    <button>  <NavLink to={btn[1].href} >{btn[1].content}</NavLink>  </button>
                 </div>
-                <button className="js_mobile_nav js_mobile_button" onClick={moveNavBar}><img src={smallBtn} className="js_strokes"/></button>
+                <button className="js_mobile_nav js_mobile_button" onClick={moveNavBar}><img src={smallBtn} className="js_strokes" /></button>
             </nav>
-            <div className="js_mobile_nav js_mobile_list_container">
+            {<div className="js_mobile_nav js_mobile_list_container">
+                <button
+                    className={`js_btn_close_nav ${js_isOpen ? 'js_slide_nav_list' : ''}`}
+                    onClick={() => js_setOpen(false)}>
+                    <img src={closeNav} alt="close nav" />
+                </button>
                 <ul className={`js_mobile_nav js_mobile_list ${js_isOpen ? 'js_slide_nav_list' : ''}`}>
                     {items.map((item, index) => {
                         return (
@@ -52,7 +58,7 @@ const NavBar = ({ logo, items, btn, smallBtn }) => {
                         </NavLink>
                     </li>
                 </ul>
-            </div>
+            </div>}
         </>
     )
 }

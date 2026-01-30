@@ -6,11 +6,11 @@ import productData from "../data.js";
 import './ForIndividuals.css'
 
 //the section that contains everything except the headline
-const ForIndividuals = ({revers}) => {
+const ForIndividuals = ({revers ,tittle,description ,data,datas}) => {
     return (
         <div className={` ak_for_individuals ${revers ? "revers" :''}`}>
             <div className="ak_productdata">
-            {productData.map((item,index)=>{
+            {data && data.map((item, index) => {
                     return(
                         <CardContiner
                             key={index}
@@ -22,13 +22,13 @@ const ForIndividuals = ({revers}) => {
                 </div>
             <div className="ak_countinar">  
                     <Tittle 
-                        tittle ="For Individuals"
-                        description="For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers"
+                        tittle={tittle}
+                        description={description}
                         className="tittle_variant"
                         
                     />
                     <div className="ak_card_grids">
-                        {product.map((item,index)=>{
+                        {datas &&datas.map((item, index) =>{
                                 return(
                                     <CardAndButton
                                         key={index}

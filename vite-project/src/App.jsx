@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Security from './pages/Security'
@@ -7,65 +6,18 @@ import About from './pages/About'
 import Careers from './pages/Careers'
 import SignUp from './pages/SignUp'
 import LogIn from './pages/LogIn'
-import logo from '/Images/Home Page/Logo.png'
-import stroke from '/Images/Home Page/Mobile Icon.png'
+import logo from '/Images/HomePage/Logo.png'
+import stroke from '/Images/HomePage/Mobile Icon.png'
 import NavBar from './components/Shared components/NavBar/NavBar'
 import Footer from './components/Shared components/Footer/Footer'
-import mail from '/Images/Home Page/Email.png'
-import phone from '/Images/Home Page/Phone.png'
-import location from '/Images/Home Page/Location.png'
-import facebook from '/Images/Home Page/Facebook.png'
-import linkedIn from '/Images/Home Page/LinkedIn.png'
-import twitter from '/Images/Home Page/Twitter.png'
+import url from './components/Shared components/NavBar/js_NavBar_data_url'
+import contact from './components/Shared components/Footer/js_Footer_data_contact'
+import icons from './components/Shared components/Footer/js_Footer_data_sm_icons'
+import btn from './components/Shared components/NavBar/js_NavBar_btn'
+import Dashboard from './pages/Dashboard'
 
 
 function App() {
-  const url = [{
-    content: "Home",
-    href: "/"
-  }, {
-    content: "Careers",
-    href: "/careers"
-  }, {
-    content: "About",
-    href: "/about"
-  }, {
-    content: "Security",
-    href: "/security"
-  }]
-
-  const contact = [{
-    icon: mail,
-    content: "hello@skillbirdge.com"
-  }, {
-    icon: phone,
-    content: "+91 91813 23 2309"
-  }, {
-    icon: location,
-    content: "Somewhere in the World"
-  }]
-
-  const btn = [{
-    content: "Sign Up",
-    href: "/signup"
-  }, {
-    content: "Log In",
-    href: "/login"
-  }]
-
-  const icons = [{
-    content: facebook,
-    href: "https://www.facebook.com/"
-  }, {
-    content: twitter,
-    href: "https://x.com/"
-  }, {
-    content: linkedIn,
-    href: "https://www.linkedin.com/"
-  }]
-
-
-
 
   return (
     <>
@@ -83,6 +35,7 @@ function App() {
         <Route path="/security" element={<Security />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
+          <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer
         logo={logo}
@@ -93,7 +46,10 @@ function App() {
         p="Privacy Policy"
         s="Terms of Service"
       />
+
+
     </>
+
   )
 }
 
