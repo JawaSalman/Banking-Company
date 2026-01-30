@@ -1,4 +1,4 @@
-      // ================================
+// ================================
 // Website Pages Definition
 // ================================
 export const pages = [
@@ -26,25 +26,26 @@ export const pages = [
 // ==================================================
 export const sections = {
 
-  // Sections for Home page
-  1: [
-    { id: 0, name: 'Our Products' }, // Products section
-    { id: 1, name: 'Our Features' }, // Features section
-    { id: 2, name: 'Frequently Asked Questions' } // FAQ section
-  ],
+    // Sections for Home page
+    1: [
+        { id: 0, name: 'Our Products' }, // Products section
+        { id: 1, name: 'Our Features' }, // Features section
+        { id: 2, name: 'Frequently Asked Questions' }, // FAQ section
+        { id: 3, name: 'Our Testimonials' } //our Testimonials
+    ],
 
-  // Sections for Careers page
-  2: [
-    { id: 0, name: 'Our Values' }, // Company values
-    { id: 1, name: 'Our Benefits' }, // Employee benefits
-    { id: 2, name: 'Job Openings' } // Available job positions
-  ],
+    // Sections for Careers page
+    2: [
+        { id: 0, name: 'Our Values' }, // Company values
+        { id: 1, name: 'Our Benefits' }, // Employee benefits
+        { id: 2, name: 'Job Openings' } // Available job positions
+    ],
 
-  // Sections for About page
-  3: [
-    { id: 0, name: "How We Protect You" }, // Security explanation
-    { id: 1, name: "Mission & Vision" } // Mission and vision section
-  ]
+    // Sections for About page
+    3: [
+        { id: 0, name: "How We Protect You" }, // Security explanation
+        { id: 1, name: "Mission & Vision" } // Mission and vision section
+    ]
 
 };
 
@@ -65,5 +66,8 @@ export const tableSchemas = {
     '1-2': ['question', 'answer'],
 
     // OurBenefits (Careers Page)
-    '2-1': ['title', 'description']
+    '2-1': ['title', 'description'],
+
+    //our Testimonials
+    '1-3': ['clientName', 'clientOpinen', 'category']
 };
