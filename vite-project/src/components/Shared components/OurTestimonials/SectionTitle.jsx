@@ -15,9 +15,9 @@ const SectionTitle = ({ ftitle, title, subTitle, fbutton, sbutton, activeTab, se
             </div>
             <div className="ma-btns flex-center">
                 <button
-                    className={activeTab === 'individual' ? 'ma-btn active' : 'ma-btn'}
+                    className={activeTab === 'individual' ? 'mar-btn active': 'mar-btn'}
                     onClick={() => setActiveTab('individual')}>{fbutton}</button>
-                <button className={activeTab === 'business' ? 'ma-btn active' : 'ma-btn'}
+                <button className={activeTab === 'business' ? 'mar-btn active' : 'mar-btn'}
                     onClick={() => setActiveTab('business')}>{sbutton}</button>
             </div>
         </div>

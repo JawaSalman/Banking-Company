@@ -30,7 +30,8 @@ export const sections = {
   1: [
     { id: 0, name: 'Our Products' }, // Products section
     { id: 1, name: 'Our Features' }, // Features section
-    { id: 2, name: 'Frequently Asked Questions' } // FAQ section
+    { id: 2, name: 'Frequently Asked Questions' }, // FAQ section
+    { id: 3, name: 'Our Testimonials' } //our Testimonials
   ],
 
   // Sections for Careers page
@@ -65,5 +66,7 @@ export const tableSchemas = {
     '1-2': ['question', 'answer'],
 
     // Features table (Home page)
-    '2-0': ['title', 'paragraph']
+    '2-0': ['title', 'paragraph'],
+    //our Testimonials
+    '1-3': ['clientName', 'clientOpinen', 'category']
 };
