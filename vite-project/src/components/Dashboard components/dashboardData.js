@@ -45,8 +45,12 @@ export const sections = {
     3: [
         { id: 0, name: "How We Protect You" }, // Security explanation
         { id: 1, name: "Mission & Vision" } // Mission and vision section
-    ]
+    ],
 
+    //Sections for Security page
+    4: [
+        { id: 0, name: "How We Protect You" },
+    ]
 };
 
 // ===================================================
@@ -69,5 +73,8 @@ export const tableSchemas = {
     '2-1': ['title', 'description'],
 
     //our Testimonials
-    '1-3': ['clientName', 'clientOpinen', 'category']
+    '1-3': ['clientName', 'clientOpinen', 'category'],
+
+    //How We Protect You(Security page)
+    '4-0': ['imag', 'title', 'paragraph']
 };

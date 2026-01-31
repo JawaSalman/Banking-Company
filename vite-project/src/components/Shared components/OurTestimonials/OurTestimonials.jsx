@@ -1,8 +1,7 @@
-
 import SectionTitle from "./SectionTitle";
 import Slider from "../Slider/Slider";
 import TestimonialCard from "./TestimonialCard";
-import { useState, useEffect } from 'react'; 
+import { useState, useEffect } from 'react';
 import { cardData } from "./TestimonialsData";
 import "./SectionTitle.css";
 const OurTestimonials = () => {
@@ -15,7 +14,7 @@ const OurTestimonials = () => {
     useEffect(() => {
         if (!localStorage.getItem(DASHBOARD_KEY)) {
             localStorage.setItem(DASHBOARD_KEY, JSON.stringify(cardData));
-            
+
             setAllTestimonials(cardData);
         }
     }, [cardData]);
@@ -25,7 +24,7 @@ const OurTestimonials = () => {
 
     return (
         <>
-            <SectionTitle 
+            <SectionTitle
                 className="ma-ourtest"
                 ftitle="Our"
                 title="Testimonials"

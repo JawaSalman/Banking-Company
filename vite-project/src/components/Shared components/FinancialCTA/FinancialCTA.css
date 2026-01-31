@@ -2,7 +2,6 @@
   position: relative;
   max-width: 1596px;
   display: flex;
-  height: 288px;
   background-color: var(--light-bg);
   border-radius: 20px;
   margin: 0 162px;
@@ -73,7 +72,6 @@
 @media screen and (max-width:1440px) {
   .ma-financial-cta {
     margin: 0px 80px;
-    height: 223px;
     margin-top: 120px;
     margin-bottom: 150px;
 
@@ -114,6 +112,10 @@
     text-align: center;
     padding: 30px;
     margin-bottom: 80px;
+
+    h1 {
+      font-size: 24px;
+    }
   }
 
   .ma-cta-image {
@@ -121,7 +123,7 @@
     height: 143px;
     position: absolute;
     top: 0px;
-    left: 10px;
+    left: 0px;
     z-index: 0;
   }
 
@@ -131,9 +133,7 @@
     z-index: 1;
   }
 
-  .ma-card-title {
-    font-size: 24px;
-  }
+
 
   .ma-card-description {
     margin-top: 14px;

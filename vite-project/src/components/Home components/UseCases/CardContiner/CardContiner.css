@@ -5,15 +5,15 @@
     opacity: 1;
     border-radius: 16px;
     padding: 20px;
-    background-color: var(--light-bg);
+    background-color: var(--bg-main);
     border: 2px solid var(--br-light);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     text-align: center;
     box-sizing: border-box;
+
 
     img {
         background-size: cover;
@@ -21,8 +21,7 @@
 
     p {
         width: 100%;
-        max-width: 160px;
-        height: 60px;
+        max-width: 212px;
         opacity: 1;
         text-align: center;
         color: var(--text-description);
@@ -55,9 +54,29 @@
 @media (max-width:1440px) {
 
     .ak_cardcontiner {
+        width: 47%;
         max-width: 260px;
-        width: 40%;
+        max-height: 174px;
+        gap: 14px;
+        padding: 24px;
+
     }
+
+    .ak-inner-circle {
+        width: 48px;
+        height: 48px;
+
+        img {
+            width: 24px;
+        }
+    }
+
+    .ak-outer-circle {
+        width: 64px;
+        height: 64px;
+
+    }
+
 }
 
 @media (max-width:992px) {
