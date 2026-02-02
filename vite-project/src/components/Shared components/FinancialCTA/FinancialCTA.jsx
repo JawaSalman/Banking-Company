@@ -5,11 +5,15 @@ import { Link } from "react-router-dom";
 // Import CTA data
 import financialCTAData from "./FinancialCTAData";
 
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 const FinancialCTA = () => {
   const { title, description, buttonText, image } = financialCTAData;
 
   return (
-    <div className="ma-financial-cta">
+    <div
+      className="ma-financial-cta">
       {/* Optional CTA image */}
       {image && (
         <img
@@ -22,18 +26,21 @@ const FinancialCTA = () => {
       {/* Text overlay content */}
       <div className="ma-text-overlay">
         <h1
+
           className="ma-card-titlee"
           dangerouslySetInnerHTML={{ __html: title }}
         />
 
-        <p className="ma-card-description">
+        <p
+          className="ma-card-description">
           {description}
         </p>
       </div>
 
       {/* CTA button */}
       <Link to="/signup">
-        <button className="ma-finical-btn">
+        <button
+          className="ma-finical-btn">
           {buttonText}
         </button>
       </Link>

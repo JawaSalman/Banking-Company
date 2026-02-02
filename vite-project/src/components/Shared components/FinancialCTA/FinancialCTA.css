@@ -2,14 +2,20 @@
   position: relative;
   max-width: 1596px;
   display: flex;
-  background-color: var(--light-bg);
   border-radius: 20px;
   margin: 0 162px;
   margin-top: 150px;
   margin-bottom: 180px;
   padding-right: 80px;
   gap: 150px;
+  background: linear-gradient(267.5deg, #1C1C1C 65.67%, rgba(28, 28, 28, 0) 99.81%), url('/Images/HomePage/Bg.png'), #1C1C1C;
+  background-blend-mode: normal, screen, normal;
+  border-radius: 20px;
+
+z-index: 1;
 }
+
+
 
 .ma-financial-cta::before {
   content: "";
@@ -31,7 +37,10 @@
 .ma-cta-image {
   position: absolute;
   left: 0px;
-  height: 100%;
+  top: 0;
+  width: 298px;
+  height: 238px;
+  z-index: 2;
 }
 
 .ma-text-overlay {
@@ -65,15 +74,21 @@
   border: none;
 }
 
+
+
+
+
 /* =======================
    Responsive
 ======================= */
 
 @media screen and (max-width:1440px) {
   .ma-financial-cta {
-    margin: 0px 80px;
+    margin: 0px auto;
     margin-top: 120px;
     margin-bottom: 150px;
+    max-width: 1280px;
+    width: 95%;
 
   }
 
@@ -105,14 +120,13 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin: 0px 16px;
+    margin: 0px auto;
     margin-top: 80px;
     align-items: center;
     height: auto;
     text-align: center;
     padding: 30px;
     margin-bottom: 80px;
-
     h1 {
       font-size: 24px;
     }

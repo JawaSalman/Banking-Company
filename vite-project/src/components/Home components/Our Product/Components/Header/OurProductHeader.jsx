@@ -1,5 +1,6 @@
 import './OurProductHeader.css'
 
+
 const OurProductHeader = ({ Headerdata, activeCategory, setCategory }) => {
   return (
     <div className="hs-product-header flex-between">
@@ -10,6 +11,8 @@ const OurProductHeader = ({ Headerdata, activeCategory, setCategory }) => {
         <p className='hs-description'>{Headerdata.description}</p>
       </div>
 
+
+      {/* Right side: Category Toggle Buttons */}
       <div className="hs-toggle-container border">
         <button
           className={`hs-btn-text ${activeCategory == 'individual' ? 'hs-active-btn' : 'hs-not-active-btn'}`}
@@ -17,7 +20,7 @@ const OurProductHeader = ({ Headerdata, activeCategory, setCategory }) => {
         >
           {Headerdata.individualBtn}
         </button>
-
+        {/* Button for Businesses category */}
         <button className={`hs-btn-text ${activeCategory == 'businesses' ? 'hs-active-btn' : 'hs-not-active-btn'} `} onClick={() => setCategory('businesses')}>
           {Headerdata.businessesBtn}
         </button>

@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react'
 import './OurFeatures.css'
 import FeatureCard from './FeatureCard'
 
+// eslint-disable-next-line no-unused-vars
+import { motion, AnimatePresence } from 'framer-motion'
+import { containerVariants } from '../../Animation/Animation'
+
 const STORAGE_KEY = "tableData-1-1"
 
 const OurFeatures = () => {
@@ -37,7 +41,7 @@ const OurFeatures = () => {
 
     const parsed = JSON.parse(saved)
 
-    
+
     return parsed.map(item => ({
       id: item.id,
       title: item.title,
@@ -78,18 +82,28 @@ const OurFeatures = () => {
         </aside>
 
         {/* ===== Cards ===== */}
-        <div className="mh-features-cards">
-          {features
-            .filter(feature => feature.category === selectedCategory)
-            .map(feature => (
-              <FeatureCard
-                key={feature.id}
-                title={feature.title}
-                description={feature.description}
-              />
-            ))
-          }
-        </div>
+        <AnimatePresence mode="wait">
+
+          <motion.div
+            key={selectedCategory}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+
+            className="mh-features-cards">
+            {features
+              .filter(feature => feature.category === selectedCategory)
+              .map(feature => (
+                <FeatureCard
+                  key={feature.id}
+                  title={feature.title}
+                  description={feature.description}
+                />
+              ))
+            }
+          </motion.div>
+        </AnimatePresence>
 
       </div>
     </section>

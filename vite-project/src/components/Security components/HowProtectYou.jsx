@@ -16,10 +16,10 @@ const HowProtectYou = () => {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(CardData));
             setAllHowProtect(CardData);
         }
-    }, [CardData])
+    }, [])
     return (
         <>
-            <section className="section-margin mar-protectYou-section">
+            <section className=" mar-protectYou-section">
                 <ProtectYouTitle
                     ftitle="How We "
                     title="Protect You"

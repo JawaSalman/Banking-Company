@@ -1,24 +1,44 @@
 import { NavLink } from 'react-router-dom'
 import './Footer.css'
 
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, iconHover } from '../../Animation/Animation';
+
 const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
     return (
         <footer className=' flex-center flex-col'>
-            <div className="js_logo_url_cnt flex-center flex-col">
-                <img src={logo} className="js_logo" />
+            <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, margin: "-50px" }}
+                className="js_logo_url_cnt flex-center flex-col">
+                <motion.img
+                    variants={fadeIn("up")}
+
+                    src={logo} className="js_logo" />
                 <ul>
                     {items.map((item, index) => {
                         return (
-                            <li key={index}>
+                            <motion.li
+                                variants={fadeIn("up")}
+
+                                key={index}>
                                 <NavLink to={item.href}>
                                     {item.content}
                                 </NavLink>
-                            </li>
+                            </motion.li>
                         )
                     })}
                 </ul>
-            </div>
-            <div className="js_mail_num_loc_cnt flex-center ">
+            </motion.div>
+            <motion.div
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="js_mail_num_loc_cnt flex-center ">
                 {contact.map((contact, index) => {
                     return (
                         <div className='js_pic_text_align' key={index}>
@@ -27,13 +47,24 @@ const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
                         </div>
                     )
                 })}
-            </div>
-            <div className="js_sm_rps_cnt flex-between border">
+            </motion.div>
+            <motion.div
+                variants={fadeIn("up", 0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false }}
+                className="js_sm_rps_cnt flex-between border">
                 <div className="js-sm-cnt flex-center">
                     {icons.map((icon, index) => {
                         return (
                             <NavLink to={icon.href} key={index} className="js-sm-yellow-cont">
-                                <img src={icon.content} />
+                                <motion.img
+                                    whileHover={{
+                                        ...iconHover.hover,
+                                        scale: 1.6
+                                    }}
+                                    variants={iconHover}
+                                    src={icon.content} />
                             </NavLink>
                         )
                     })}
@@ -47,7 +78,7 @@ const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
                     <p>{p}</p>
                     <p className='js-service-p'>{s}</p>
                 </div>
-            </div>
+            </motion.div>
         </footer>
     )
 }

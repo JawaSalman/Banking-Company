@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { tableSchemas } from "../dashboardData";
 import "./TableComponent.css";
+import { h1 } from "framer-motion/client";
 
 /**
  * TableComponent
@@ -177,6 +178,7 @@ const TableComponent = ({ activePage, activeSection }) => {
 
       {/* Table header with Add button */}
       <div className="ma-table-header">
+        <h1>Admin Control Center</h1>
         <button className="ma-btn ma-btn-add" onClick={handleAddNew}>
           + Add New Row
         </button>
@@ -224,13 +226,15 @@ const TableComponent = ({ activePage, activeSection }) => {
                         className="ma-btn ma-btn-save"
                         onClick={handleSave}
                       >
-                        Save
+                        <img src="/Images/Dashboard/Save.png" alt="" />
+
                       </button>
                       <button
                         className="ma-btn ma-btn-cancel"
                         onClick={handleCancel}
                       >
-                        Cancel
+                        <img src="/Images/Dashboard/Cancel.png" alt="" />
+
                       </button>
                     </>
                   ) : (
@@ -239,13 +243,13 @@ const TableComponent = ({ activePage, activeSection }) => {
                         className="ma-btn ma-btn-edit"
                         onClick={() => handleEdit(row)}
                       >
-                        Edit
+                        <img src="/Images/Dashboard/Edit.png" alt="" />
                       </button>
                       <button
                         className="ma-btn ma-btn-delete"
                         onClick={() => handleDelete(row.id)}
                       >
-                        Delete
+                        <img src="/Images/Dashboard/Delete.png" alt="" />
                       </button>
                     </>
                   )}

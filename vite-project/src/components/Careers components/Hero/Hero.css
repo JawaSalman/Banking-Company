@@ -1,60 +1,55 @@
-.ak_hero {
+.ak-hero {
+    max-width: 1596px;
     width: 95%;
-    max-width: 1569px;
-    margin: 120px auto;
+    margin: 198px auto 150px;
+border-radius: 20px;
+    background-color: #1C1C1C;
     padding: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    background-color: var(--light-bg);
-    background-image: url("/Images/CareersPage/hero Texture.png");
+        background-image: url("/Images/CareersPage/hero Texture.png");
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: 250px;
-    border-radius: 16px;
-    overflow: hidden;
-
-    img {
-        position: relative;
-        z-index: 2;
-        width: 70%;
-        max-width: 968px;
-        height: auto;
-        border-radius: 20px;
-    }
-
+    background-size: 505px 480px;
 }
-
-.ak-hero-margin {
-    margin-top: 198px;
+.ak-hero-wrapper {
+    position: relative;
+        display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
-
-
 
 
 @media (max-width: 1440px) {
-    .ak_hero {
-        img {
-            width: 65%;
-        }
+.ak-hero {
+    max-width: 1280px;
+    margin: 153px auto 120px;
+            background-size: 334px 317px;
+
+}
+
+    .ak-hero-image-container {
+    img {
+        width: 715px;
     }
-
-
-
-    .ak-hero-margin {
-        margin-top: 153px;
     }
 }
 
+
+
 @media (max-width: 992px) {
-    .ak_hero {
+.ak-hero {
+    padding: 14px;
+    margin-bottom: 120px;
+        background-size: 199px 189px;
+
+}
+    .ak-hero-wrapper {
         height: auto;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 14px;
         margin: 16px auto;
+        padding: 0;
 
         img {
             width: 100%;
@@ -64,6 +59,6 @@
     }
 
     .ak-hero-margin {
-        margin-top: 138px;
+        margin: 80px auto;
     }
 }

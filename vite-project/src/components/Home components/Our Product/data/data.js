@@ -1,3 +1,8 @@
+/**
+ * 1. Products Section Header Data
+ * Contains the main heading, description, and toggle button labels.
+ */
+
 export const OurProductsHeaderData =
 {
   titleOne: "Our",
@@ -8,8 +13,10 @@ export const OurProductsHeaderData =
 }
 
 
-// *************************************************************************
-
+/**
+ * 2. Products List Data
+ * Array of banking products categorized by 'individual' and 'businesses'.
+ */
 export const OurProductsData = [
   {
     id: 1,

@@ -1,17 +1,36 @@
+import TittleHero from '../TittleHero/TittleHero';
+import './Hero.css';
+// Framer Motion
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { fadeIn } from '../../Animation/Animation';
 
-import TittleHero from '../TittleHero/TittleHero'
-import './Hero.css'
-
-
-const Hero = ({ imagesrc, children ,tittletop}) => {
+const Hero = ({ imagesrc, children, titleTop }) => {
     return (
-        <div className="ak_hero ak-hero-margin">
-            <img src={imagesrc} />
-            <TittleHero top={tittletop}>
-                {children}
-            </TittleHero>
-        </div>
-    )
-}
+        <section className="ak-hero ak-hero-margin">
+            <motion.div
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="ak-hero-wrapper"
+            >
+                <div className="ak-hero-image-container">
+                    <motion.img
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                        src={imagesrc}
+                        alt="Hero background"
+                    />
+                </div>
 
-export default Hero
+                <TittleHero top={titleTop}>
+                    {children}
+                </TittleHero>
+            </motion.div>
+        </section>
+    );
+};
+
+export default Hero;

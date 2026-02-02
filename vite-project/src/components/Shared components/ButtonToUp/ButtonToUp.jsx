@@ -10,7 +10,7 @@ const ButtonToUp = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 300); // يظهر بعد التمرير 300px
+      setIsVisible(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', toggleVisibility);
@@ -23,7 +23,7 @@ const ButtonToUp = () => {
         onClick={scrollToTop}
         className={isVisible ? 'visible' : ''}
       >
-        UP
+        <img src="/Images/HomePage/ArrowUpWarm.svg" alt="" className='UpArrow' />
       </button>
     </div>
   );

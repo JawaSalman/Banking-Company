@@ -15,12 +15,19 @@ import contact from './components/Shared components/Footer/js_Footer_data_contac
 import icons from './components/Shared components/Footer/js_Footer_data_sm_icons'
 import btn from './components/Shared components/NavBar/js_NavBar_btn'
 import Dashboard from './pages/Dashboard'
+import Cursor from './components/Shared components/Cursor/CursorComponent'
 
 
 function App() {
 
   return (
     <>
+      {/* Persistent decorative background texture fixed in the corner across all pages. */}
+      <div className="ma-hero-background-abstract">
+        <img src="\Images\HomePage\Main Texture.png" className="MainTexture" />
+      </div>
+
+      <Cursor />
       <NavBar
         logo={logo}
         items={url}
@@ -35,7 +42,7 @@ function App() {
         <Route path="/security" element={<Security />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<LogIn />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer
         logo={logo}

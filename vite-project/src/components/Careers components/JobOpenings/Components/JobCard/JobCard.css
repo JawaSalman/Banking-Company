@@ -27,7 +27,7 @@
 }
 
 .hs-job-card-section {
-    margin-top: 50px;
+    margin-top: 40px;
 
     .hs-sub-title {
         font-size: 24px;
@@ -65,12 +65,11 @@
     width: fit-content;
     cursor: pointer;
     transition: transform 0.3s ease;
-    margin-top: 77px;
+    margin-top: 50px;
 
     &:hover {
         background-color: transparent;
         color: var(--primary-color);
-        transform: translateY(-3px);
     }
 }
 
@@ -86,17 +85,25 @@
     }
 
     .hs-job-card-section {
+        max-width: 550px;
 
         .hs-sub-title-desc {
             font-size: 16px;
         }
     }
 
+    .hs-job-card-tags {
+        .hs-job-tag {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+
+    }
+
     .hs-apply-btn {
         margin-top: 40px;
     }
 }
-
 
 
 @media (max-width: 992px) {
@@ -135,5 +142,7 @@
         width: 100%;
         text-align: center;
         margin-top: 30px;
+        font-size: 14px;
+        padding: 12px 20px;
     }
 }

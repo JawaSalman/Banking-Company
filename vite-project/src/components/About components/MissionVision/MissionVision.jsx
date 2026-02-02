@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import "./MissionVision.css";
 import missionVisionData from "./MissionVisionData";
 
+
+// Framer Motion
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { floatAnimation, fadeIn } from "../../Animation/Animation";
+
 const STORAGE_KEY = "tableData-3-1";
 
 /**
@@ -39,20 +45,30 @@ const MissionVision = () => {
 
   return (
     <section className="ma-mission-vision-container">
-      
+
       {/* Header section with title and description */}
       <div className="ma-header">
-        <h1 className="ma-title">{title}</h1>
-        <p className="ma-description">{description}</p>
+        <motion.h1
+          variants={fadeIn("up", 0.1)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="ma-title">{title}</motion.h1>
+        <motion.p
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="ma-description">{description}</motion.p>
       </div>
 
       {/* List of mission/vision items */}
       <div className="ma-list">
-        {items.map((item) => (
-          
+        {items.map((item, index) => (
+
           // Individual mission/vision card
           <div className="ma-item" key={item.id}>
-            
+
             {/* Textual content */}
             <div className="ma-item-data">
               <h2 className="ma-item-title">{item.title}</h2>
@@ -60,8 +76,16 @@ const MissionVision = () => {
             </div>
 
             {/* Image container with background + foreground image */}
-            <div className="ma-image-wrapper">
-              <img
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+
+              className="ma-image-wrapper">
+              <motion.img
+                {...floatAnimation(index)}
+                animate={{ ...floatAnimation(index).animate, transition: { ...floatAnimation(index).animate.transition, duration: 4 } }}
+
                 className="ma-bg-image"
                 src={background}
                 alt=""
@@ -71,7 +95,7 @@ const MissionVision = () => {
                 src={item.image}
                 alt={item.title}
               />
-            </div>
+            </motion.div>
 
           </div>
         ))}

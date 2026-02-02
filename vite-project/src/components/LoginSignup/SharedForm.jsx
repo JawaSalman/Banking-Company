@@ -2,6 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SharedForm.css";
 
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, btnAnimation, iconHover } from "../Animation/Animation";
+
+
 // Social icons data
 const SOCIAL_ICONS = [
   { id: 1, src: "/Images/LoginPage/Google.png", alt: "Google", url: "https://www.google.com/" },
@@ -21,32 +26,51 @@ export default function SharedForm({ title, description, fields, submitText, sec
 
   return (
     <section className="mh-login-page">
-      <img
-        src="/Images/LoginPage/Main Texture.png"
-        className="mh-mainTexture"
-        alt=""
-      />
+      <div
 
-      <form className="mh-login-card" onSubmit={(e) => e.preventDefault()}>
-        <h1 className="mh-title">{title}</h1>
-        <p className="mh-desc">{description}</p>
+        className="image-container">
+        <motion.img
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+
+          src="/Images/LoginPage/Main Texture.png"
+          className="mh-mainTexture"
+          alt=""
+        />
+
+      </div>
+
+
+      <motion.form
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mh-login-card" onSubmit={(e) => e.preventDefault()}>
+        <motion.h1 variants={fadeIn("up")} className="mh-title">{title}</motion.h1>
+        <motion.p variants={fadeIn("up")} className="mh-desc">{description}</motion.p>
 
         <div className="mh-auth-inputs">
           {fields.map((field, index) => {
             if (field.type === "password") {
               return (
-                <div key={index} className="mh-password-wrapper">
+                <motion.div
+                  variants={fadeIn("up")}
+
+                  key={index} className="mh-password-wrapper">
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder={field.placeholder}
                   />
-                  <img
+                  <motion.img
+                    whileTap={{ scale: 1.5 }}
                     src="/Images/LoginPage/Show Password.png"
                     alt="toggle password"
                     className="mh-password-eye"
                     onClick={() => setShowPassword(prev => !prev)}
                   />
-                </div>
+                </motion.div>
               );
             }
 
@@ -67,14 +91,22 @@ export default function SharedForm({ title, description, fields, submitText, sec
         )}
 
         <div className="mh-loginOrSignup">
-          <input className="mh-btn-login" type="submit" value={submitText} />
-          <button
+          <motion.input
+            variants={btnAnimation}
+            whileHover="whileHover"
+            whileTap="whileTap"
+            className="mh-btn-login" type="submit" value={submitText} />
+          <motion.button
+            variants={btnAnimation}
+            whileHover="whileHover"
+            whileTap="whileTap"
+
             className="mh-btn-signup"
             type="button"
             onClick={handleSecondaryClick}
           >
             {secondaryText}
-          </button>
+          </motion.button>
         </div>
 
         <div className="mh-divider">
@@ -85,13 +117,20 @@ export default function SharedForm({ title, description, fields, submitText, sec
 
         <div className="mh-social">
           {SOCIAL_ICONS.map(icon => (
-            <span key={icon.id} className="mh-social-icon">
+            <motion.span
+              variants={fadeIn("up")}
+              whileHover="hover"
+              key={icon.id} className="mh-social-icon">
               <a href={icon.url}>
-                <img src={icon.src} alt={icon.alt} />
-              </a>            </span>
+                <motion.img
+                  variants={iconHover}
+
+                  src={icon.src} alt={icon.alt} />
+              </a>
+            </motion.span>
           ))}
         </div>
-      </form>
+      </motion.form>
     </section>
   );
 }

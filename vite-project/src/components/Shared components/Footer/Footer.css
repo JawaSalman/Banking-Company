@@ -1,5 +1,5 @@
 footer {
-    margin-top: 100px;
+    margin-top: 150px;
     background-color: var(--light-bg);
     padding-left: 80px;
     padding-right: 80px;
@@ -51,10 +51,11 @@ footer {
 
     .js_sm_rps_cnt {
         border-radius: 100px;
-        padding: 16px 30px 16px 16px;
+        padding: 16px;
         margin: 50px 0px;
         width: 100%;
         background-color: var(--bg-main);
+        max-width: 1596px;
 
 
         .js-sm-yellow-cont {
@@ -90,7 +91,7 @@ footer {
 
 @media (max-width: 1440px) {
     footer {
-
+margin-top: 120px;
         .js_logo_url_cnt {
             padding: 60px 0px 40px;
             gap: 40px;

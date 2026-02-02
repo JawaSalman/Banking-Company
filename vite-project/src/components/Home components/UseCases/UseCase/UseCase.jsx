@@ -3,11 +3,19 @@ import ForIndividuals from "../ForIndividuals/ForIndividuals"
 import Tittle from "../Tittle/Tittle"
 import './UseCase.css'
 //the section is complete
-
+// Framer Motion
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { staggerContainer } from "../../../Animation/Animation";
 const UseCase = () => {
     return (
         <>
-            <section className='ak_use'>
+            <motion.section
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className='ak_use'>
                 <Tittle
                     tittle="Use Cases"
                     description="At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions"
@@ -26,7 +34,7 @@ const UseCase = () => {
                     datas={productbusiness}
 
                 />
-            </section>
+            </motion.section>
         </>
 
     )

@@ -1,7 +1,7 @@
 .hs-products-container {
   display: flex;
-  padding: 20px 0;
-  gap: 20px;
+  justify-content: space-between;
+  max-width: 1596px;
 }
 
 .hs-section-margin {
@@ -32,6 +32,7 @@
 @media (max-width: 992px) {
   .hs-op-section {
     max-width: 100%;
+    padding: 11px;
   }
 
   .hs-flex-sm-col {

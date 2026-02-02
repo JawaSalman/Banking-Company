@@ -43,13 +43,12 @@ export const sections = {
 
     // Sections for About page
     3: [
-        { id: 0, name: "How We Protect You" }, // Security explanation
         { id: 1, name: "Mission & Vision" } // Mission and vision section
     ],
 
     //Sections for Security page
     4: [
-        { id: 0, name: "How We Protect You" },
+        { id: 0, name: "How We Protect You" }, // Security explanation
     ]
 };
 
@@ -59,12 +58,20 @@ export const sections = {
 // Format: "pageId-sectionId"
 // ===================================================
 export const tableSchemas = {
+    // Our Product (Home page)
+    '1-0': ['title', 'description', 'category', 'icon'],
+
+    // Our Features (Home Page)
+    '1-1': ['title', 'description'],
+
+    // Job Openings (Careers Page)
+    '2-2': ['title', 'location', 'department', 'description', 'requirements'],
 
     // Mission & Vision table (About page)
     '3-1': ['title', 'text'],
 
-    // Features table (Home page)
-    '1-1': ['title', 'description'],
+    // Our Values (Careers page)
+    '2-0': ['title', 'paragraph'],
 
     // FAQs table (Home page)
     '1-2': ['question', 'answer'],

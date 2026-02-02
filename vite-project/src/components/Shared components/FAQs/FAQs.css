@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 160px auto;
+    margin: 150px auto;
     width: 95%;
     max-width: 1596px;
 
@@ -84,7 +84,7 @@
     .js_FAQs_section {
         /* margin: 120px 5.6vw; */
         max-width: 1279px;
-
+margin: 120px auto;
         h1 {
             font-size: 38px;
         }
@@ -95,6 +95,7 @@
         }
 
         .js-faqs-cont {
+            gap: 18px;
             .js-faqs-card-cont {
                 max-width: 629.5px;
                 min-height: 300px;
@@ -120,7 +121,7 @@
 @media (max-width : 992px) {
     .js_FAQs_section {
 
-
+margin: 80px auto;
         h1 {
             font-size: 28px;
             text-align: center;

@@ -7,6 +7,13 @@ import { Link } from "react-router-dom"
 
 import homeHeroData from "./HomeHeroData"
 
+
+// Framer Motion
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion"
+import { containerVariants, fadeIn, floatAnimation } from "../../Animation/Animation";
+
+
 const HomeHero = () => {
   const {
     icon,
@@ -18,10 +25,18 @@ const HomeHero = () => {
   } = homeHeroData;
 
   return (
-    <section className="ma-hero-container">
+    <motion.section
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+
+      className="ma-hero-container">
 
       {/* Left side */}
-      <div className="ma-hero-left">
+      <motion.div
+        variants={fadeIn("up", 0.1)}
+
+        className="ma-hero-left">
         <IconText icon={icon} text={iconText} />
 
         <h1
@@ -36,20 +51,26 @@ const HomeHero = () => {
             {buttonText}
           </button>
         </Link>
-      </div>
+      </motion.div>
 
       {/* Right side */}
-      <div className="ma-hero-right">
+      <motion.div
+        variants={fadeIn("up", 0)}
+
+        className="ma-hero-right">
         {images.map((img, index) => (
-          <img
+          <motion.img
+            variants={floatAnimation(index)}
+            animate="animate"
+
             key={index}
             src={img}
             alt={`hero-${index}`}
             className={`ma-hero-image-${index}`}
           />
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

@@ -4,8 +4,7 @@
     gap: 24px;
     opacity: 1;
     border-radius: 16px;
-    padding: 20px;
-    background-color: var(--bg-main);
+    padding: 30px;
     border: 2px solid var(--br-light);
     border-radius: 12px;
     display: flex;
@@ -13,18 +12,20 @@
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-
+    background-color: var(--bg-main) !important;
 
     img {
-        background-size: cover;
+        max-width: 60px;
     }
 
     p {
         width: 100%;
-        max-width: 212px;
+        max-width: 160px;
+        height: 60px;
         opacity: 1;
         text-align: center;
-        color: var(--text-description);
+        color: var(--text-white);
+        size: 20px;
     }
 }
 
@@ -33,8 +34,8 @@
 }
 
 .ak-inner-circle {
-    width: 74px;
-    height: 74px;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -42,8 +43,8 @@
 }
 
 .ak-outer-circle {
-    width: 98px;
-    height: 98px;
+    width: 78px;
+    height: 78px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -51,33 +52,63 @@
 
 }
 
+
 @media (max-width:1440px) {
-
     .ak_cardcontiner {
-        width: 47%;
         max-width: 260px;
-        max-height: 174px;
-        gap: 14px;
-        padding: 24px;
-
-    }
-
-    .ak-inner-circle {
-        width: 48px;
-        height: 48px;
+        gap: 10px;
+        opacity: 1;
+        border-radius: 16px;
+        padding: 20px;
+        background-color: var(--light-bg);
+        border: 2px solid var(--br-light);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
 
         img {
-            width: 24px;
+            max-width: 60px;
+        }
+
+        p {
+            width: 100%;
+            max-width: 160px;
+            height: 60px;
+            opacity: 1;
+            text-align: center;
+            color: var(--text-white);
+            size: 20px;
         }
     }
 
-    .ak-outer-circle {
-        width: 64px;
-        height: 64px;
-
+    .bg-icon {
+        background: var(--gradient);
     }
 
+    .ak-inner-circle {
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ak-outer-circle {
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
 }
+
+
 
 @media (max-width:992px) {
     .ak_cardcontiner {
