@@ -15,6 +15,7 @@
 
 .hs-pr-card-content {
   padding: 30px;
+  padding-top: 0;
 }
 
 .hs-pr-card-title {
@@ -37,6 +38,7 @@
 
 .hs-pr-card-description {
   font-size: 18px;
+  font-weight: 300;
 }
 
 @media (max-width: 1440px) {
@@ -52,6 +54,8 @@
 
   .hs-pr-card-content {
     padding: 16px;
+    padding-top: 0;
+
   }
 
   .hs-pr-card-title {
@@ -77,8 +81,10 @@
   .hs-pr-card-title {
     font-size: 18px;
   }
-  .hs-pr-card-image  {
+
+  .hs-pr-card-image {
     margin: 0 auto;
+
     img {
       height: 206px;
     }
@@ -88,14 +94,16 @@
 
   .hs-pr-card-content {
     padding: 0;
+    padding-top: 0;
+
   }
 
   .hs-pr-tag {
     font-size: 14px;
   }
 
-      .hs-pr-card-description {
-        font-size: 14px;
-        font-weight: 300;
-    }
+  .hs-pr-card-description {
+    font-size: 14px;
+    font-weight: 300;
+  }
 }
