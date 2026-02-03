@@ -70,6 +70,10 @@
   color: var(--text-white);
 }
 
+.ma-table-img {
+  width: 30px;
+  height: 30px;
+}
 .ma-no-table,
 .ma-no-data {
   width: 100%;

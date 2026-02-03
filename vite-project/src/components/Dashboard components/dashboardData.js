@@ -62,7 +62,7 @@ export const tableSchemas = {
     '1-0': ['title', 'description', 'category', 'icon'],
 
     // Our Features (Home Page)
-    '1-1': ['title', 'description'],
+    '1-1': ['title', 'description' , 'category'],
 
     // Job Openings (Careers Page)
     '2-2': ['title', 'location', 'department', 'description', 'requirements'],
@@ -77,7 +77,7 @@ export const tableSchemas = {
     '1-2': ['question', 'answer'],
 
     // OurBenefits (Careers Page)
-    '2-1': ['title', 'description'],
+    '2-1': [ 'image' , 'title', 'description'],
 
     //our Testimonials
     '1-3': ['clientName', 'clientOpinen', 'category'],

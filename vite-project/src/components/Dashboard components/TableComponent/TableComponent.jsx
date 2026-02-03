@@ -213,9 +213,18 @@ const TableComponent = ({ activePage, activeSection }) => {
                         onChange={(e) => handleChange(col, e.target.value)}
                       />
                     ) : (
-                      row[col] ?? ""
+                      (col === "image" || col === "icon" || col === "imag") ? (
+                        <img
+                          src={row[col]}
+                          alt=""
+                          className="ma-table-img"
+                        />
+                      ) : (
+                        row[col] ?? ""
+                      )
                     )}
                   </td>
+
                 ))}
 
                 {/* Row actions */}

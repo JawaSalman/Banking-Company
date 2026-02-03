@@ -6,7 +6,7 @@
 
 /* ================= Benefits Section ================= */
 .mh-benefits {
-  margin: 0 auto;
+   margin: 0 auto;
   background-color: #1A1A1A;
   color: #ffffff;
   width: 95%;
@@ -78,7 +78,7 @@
   left: 0;
   bottom: calc(var(--row-gap) / -2);
   width: calc(200% + var(--row-gap));
-  height: 2px;
+  height: 1px;
 
   background: repeating-linear-gradient(
     to right,
@@ -118,15 +118,15 @@ border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba
   transform: scale(1);
  mask-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0, 0, 0, 1) 0%,   
+    rgba(0, 0, 0, 0) 100%  
   );
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-
+  
 }
 
 .mh-card:nth-child(1) .mh-card-bachground,
@@ -147,7 +147,7 @@ border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba
 }
 
 .mh-benefits-grid .mh-card:nth-child(4) {
-  border-radius: 50px 20px 20px 50px;
+  border-radius: 50px 20px 20px 50px; 
 }
 
 /* ================= Card Head ================= */
@@ -221,7 +221,7 @@ border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba
 @media screen and (max-width:1440px) {
   .mh-benefits {
        max-width: 1280px;
-    width: 95%;
+    width: 88.8%;
     margin-bottom: 120px;
   }
 
@@ -346,7 +346,7 @@ border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba
     border-radius: 40px 40px 14px 14px !important;
 
   }
-
+  
     .mh-card .mh-card-bachground
 {
   border-radius: 40px 40px 14px 14px !important;

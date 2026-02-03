@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import "./OurBenefits.css";
 import BenefitsCard from "./BenefitsCard";
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { fadeIn } from '../../Animation/Animation';
-//  مفتاح منفصل للـ LocalStorage
+
 const STORAGE_KEY = "tableData-2-1";
 
 // Default benefits data
@@ -40,66 +41,42 @@ const defaultBenefits = [
 ];
 
 const OurBenefits = () => {
-  // ================= State: Benefits =================
-  const [benefits, setBenefits] = useState(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (!saved || saved === "null") return defaultBenefits;
-
-      const parsed = JSON.parse(saved);
-      if (!Array.isArray(parsed)) return defaultBenefits;
-
-
-      return parsed.map((item) => ({
-        id: item.id,
-        image: item.image,
-        title: item.title,
-        description: item.description || "",
-      }));
-    } catch {
-      return defaultBenefits;
-    }
+  // State Benefits
+    const [benefits, setBenefits] = useState(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : defaultBenefits;
   });
 
-  // ================= Persist =================
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(benefits));
-  }, [benefits]);
-
-  // ================= Control Load All / See Less =================
-  const [isOpen, setIsOpen] = useState(false);
-  const visibleBenefits = isOpen ? benefits : benefits.slice(0, 4);
-
-  const loadAll = () => setIsOpen(true);
-  const seeLess = () => setIsOpen(false);
+  // Persist to localStorage whenever benefits change
+  useEffect(() => {localStorage.setItem(STORAGE_KEY, JSON.stringify(benefits));}, [benefits]);
 
   return (
     <section className="mh-benefits">
       {/* Header */}
-      <div className="mh-benefits-header">
-        <motion.h1
-          variants={fadeIn("up", 0.1)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          Our <span>Benefits</span>
-        </motion.h1>
-        <motion.p
-          variants={fadeIn("up", 0.3)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          At YourBank, we value our employees and are dedicated to their
-          well-being and success. We offer a comprehensive range of benefits
-          designed to support their personal and professional growth.
-        </motion.p>
-      </div>
+       <div className="mh-benefits-header">
+              <motion.h1
+                variants={fadeIn("up", 0.1)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                Our <span>Benefits</span>
+              </motion.h1>
+              <motion.p
+                variants={fadeIn("up", 0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                At YourBank, we value our employees and are dedicated to their
+                well-being and success. We offer a comprehensive range of benefits
+                designed to support their personal and professional growth.
+              </motion.p>
+            </div>
 
       {/* Benefits Grid */}
       <div className="mh-benefits-grid">
-        {visibleBenefits.map((item) => (
+        {benefits.map((item) => (
           <BenefitsCard
             key={item.id}
             image={item.image}
@@ -107,12 +84,7 @@ const OurBenefits = () => {
             description={item.description}
           />
         ))}
-
-        {/* Shadow overlay when collapsed */}
-        {!isOpen && <div className="mh-black-shadow-cont" />}
       </div>
-
-
     </section>
   );
 };
