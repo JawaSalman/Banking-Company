@@ -6,6 +6,12 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, iconHover } from '../../Animation/Animation';
 
 const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
+
+    const handleCopy = (text) => {
+        navigator.clipboard.writeText(text);
+        alert("text copied")
+    };
+
     return (
         <footer className=' flex-center flex-col'>
             <motion.div
@@ -43,7 +49,7 @@ const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
                     return (
                         <div className='js_pic_text_align' key={index}>
                             <img src={contact.icon} className='js-footer-icons' />
-                            <p>{contact.content}</p>
+                            <p onClick={() => handleCopy(contact.content)} >{contact.content}</p>
                         </div>
                     )
                 })}
