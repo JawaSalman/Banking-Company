@@ -50,6 +50,7 @@
 .ma-item:nth-child(even) .ma-item-data {
   padding-right: 50px;
   margin-bottom: 0px;
+  align-self: flex-start; /* يجعل الارتفاع حسب المحتوى */
   border-right: 1px solid var(--primary-color);
 }
 
