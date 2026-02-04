@@ -55,7 +55,10 @@ const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
                     return (
                         <div className='js_pic_text_align' key={index}>
                             <img src={contact.icon} className='js-footer-icons' />
-                            <p onClick={() => handleCopy(contact.content)} >{contact.content}</p>
+                            {index === 2 ? (<NavLink to={"https://www.google.com/maps"} >{contact.content}</NavLink>)
+                                : (
+                                    <p onClick={() => handleCopy(contact.content)} >{contact.content}</p>
+                                )}
                         </div>
                     )
                 })}

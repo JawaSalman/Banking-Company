@@ -51,6 +51,7 @@ footer {
             display: flex;
             align-items: center;
 
+            a,
             p {
                 color: #E4E4E7;
             }
