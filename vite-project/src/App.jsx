@@ -16,7 +16,7 @@ import icons from './components/Shared components/Footer/js_Footer_data_sm_icons
 import btn from './components/Shared components/NavBar/js_NavBar_btn'
 import Dashboard from './pages/Dashboard'
 import Cursor from './components/Shared components/Cursor/CursorComponent'
-
+import ScrollToTop from './components/Shared components/ScrollToTop/ScrollToTop'
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
         btn={btn}
         smallBtn={stroke}
       />
-
+<ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/careers" element={<Careers />} />

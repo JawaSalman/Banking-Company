@@ -197,7 +197,7 @@
     height: 201px;
     right: 55%;
     top: 50%;
-    transform: translate(80%, -95%);
+    transform: translate(80%, -95%) !important;
   }
 
   .ma-hero-image-1 {

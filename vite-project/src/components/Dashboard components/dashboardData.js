@@ -68,7 +68,7 @@ export const tableSchemas = {
     '2-2': ['title', 'location', 'department', 'description', 'requirements'],
 
     // Mission & Vision table (About page)
-    '3-1': ['title', 'text'],
+    '3-1': ['title', 'text' ,'image'],
 
     // Our Values (Careers page)
     '2-0': ['title', 'paragraph'],
