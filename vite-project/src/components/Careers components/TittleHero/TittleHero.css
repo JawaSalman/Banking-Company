@@ -10,7 +10,7 @@
     position: absolute;
     z-index: 10;
 left: 0;
-top: 0 !important;
+top: -1px !important;
 
     h1 {
         font-weight: 500;

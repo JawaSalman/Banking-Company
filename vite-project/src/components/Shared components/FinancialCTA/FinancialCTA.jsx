@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 // Import CTA data
 import financialCTAData from "./FinancialCTAData";
 
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
 
 const FinancialCTA = () => {
   const { title, description, buttonText, image } = financialCTAData;

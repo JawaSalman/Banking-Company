@@ -5,23 +5,26 @@ import ProductCard from '../Components/ProductCard/ProductCard'
 import './OurProductSection.css'
 
 const OurProductSection = () => {
+  // Unique key for local storage persistence
   const storageKey = "tableData-1-0";
+
+  // State to manage the currently selected product category
   const [category, setCategory] = useState('individual');
 
-  const [products, setProducts] = useState(OurProductsData);
-
-  useEffect(() => {
+  // Initialize products state from localStorage or fallback to default data
+  const [products, setProducts] = useState(() => {
     const savedData = localStorage.getItem(storageKey);
+    return savedData ? JSON.parse(savedData) : OurProductsData;
+  });
 
-    if (savedData) {
-      setProducts(JSON.parse(savedData));
-    } else {
-      localStorage.setItem(storageKey, JSON.stringify(OurProductsData));
-    }
+  // Sync products data to localStorage whenever the state changes
+  useEffect(() => {
+    localStorage.setItem(storageKey, JSON.stringify(products));
+  }, [products, storageKey]);
 
-  }, []);
-
-  // Create a filtered list based on the selected category
+  /** * Filter products based on the active category.
+     * Defaults to 'individual' if category is missing.
+     */
   const filteredProducts = products.filter(product => {
     const productCat = product.category ? product.category.toLowerCase() : 'individual';
     return productCat == category;

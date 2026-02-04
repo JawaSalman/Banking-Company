@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { pages, sections } from "../dashboardData";
 import "./TabsComponent.css";
+import { div } from "framer-motion/client";
 
 /**
  * TabsComponent
@@ -47,35 +48,39 @@ const TabsComponent = ({ onChange }) => {
   };
 
   return (
-    <div className="ma-tabs">
+    <div className="dashboard">
 
-      {/* Pages tabs */}
-      <ul className="ma-pages-tabs">
-        {pages.map((page) => (
-          <li
-            key={page.id}
-            onClick={() => changePage(page.id)}
-            className={activePage === page.id ? "active" : ""}
-          >
-            {page.name}
-          </li>
-        ))}
-      </ul>
+      <div className="ma-tabs">
 
-      {/* Sections tabs (shown only when a page is selected) */}
-      <ul className="ma-sections-tabs">
-        {sections[activePage]?.map((section) => (
-          <li
-            key={section.id}
-            onClick={() => changeSection(section.id)}
-            className={activeSection === section.id ? "active" : ""}
-          >
-            {section.name}
-          </li>
-        ))}
-      </ul>
+        {/* Pages tabs */}
+        <ul className="ma-pages-tabs">
+          {pages.map((page) => (
+            <li
+              key={page.id}
+              onClick={() => changePage(page.id)}
+              className={activePage === page.id ? "active" : ""}
+            >
+              {page.name}
+            </li>
+          ))}
+        </ul>
 
+        {/* Sections tabs (shown only when a page is selected) */}
+        <ul className="ma-sections-tabs">
+          {sections[activePage]?.map((section) => (
+            <li
+              key={section.id}
+              onClick={() => changeSection(section.id)}
+              className={activeSection === section.id ? "active" : ""}
+            >
+              {section.name}
+            </li>
+          ))}
+        </ul>
+
+      </div>
     </div>
+
   );
 };
 

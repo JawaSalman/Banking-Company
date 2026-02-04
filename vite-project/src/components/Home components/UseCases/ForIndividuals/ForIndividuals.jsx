@@ -9,14 +9,14 @@ import { fadeIn } from "../../../Animation/Animation";
 //the section that contains everything except the headline
 const ForIndividuals = ({ revers, tittle, description, data, datas }) => {
     return (
-        <motion.div
-            variants={fadeIn("up", 0, 0.8)}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+        <div className={` ak_for_individuals ${revers ? "revers" : ''}`}>
+            <motion.div
+                variants={fadeIn(revers ? "left" : "right", 0.2, 0.8)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
 
-            className={` ak_for_individuals ${revers ? "revers" : ''}`}>
-            <div className="ak_productdata">
+                className="ak_productdata">
                 {data && data.map((item, index) => {
                     return (
                         <CardContiner
@@ -26,8 +26,13 @@ const ForIndividuals = ({ revers, tittle, description, data, datas }) => {
 
                     )
                 })}
-            </div>
-            <div className="ak_countinar">
+            </motion.div>
+            <motion.div
+                variants={fadeIn("up", 0.4, 0.8)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="ak_countinar">
                 <Tittle
                     tittle={tittle}
                     description={description}
@@ -47,9 +52,9 @@ const ForIndividuals = ({ revers, tittle, description, data, datas }) => {
                     })}
                 </div>
                 <button className="ak_button">Learn More</button>
-            </div>
+            </motion.div>
 
-        </motion.div>
+        </div>
     )
 }
 

@@ -177,10 +177,13 @@ const TableComponent = ({ activePage, activeSection }) => {
     <div className="ma-table-container">
 
       {/* Table header with Add button */}
-      <div className="ma-table-header">
+      <div className="ma-table-header flex-between">
         <h1>Admin Control Center</h1>
         <button className="ma-btn ma-btn-add" onClick={handleAddNew}>
-          + Add New Row
+          <img src="./Images/Dashboard/Add.png" alt="" />
+          <h2>
+            Add a New Row
+          </h2>
         </button>
       </div>
 
@@ -285,13 +288,14 @@ const TableComponent = ({ activePage, activeSection }) => {
                     className="ma-btn ma-btn-save"
                     onClick={handleSaveNew}
                   >
-                    Save
+                    <img src="/Images/Dashboard/Save.png" alt="" />
+
                   </button>
                   <button
                     className="ma-btn ma-btn-cancel"
                     onClick={handleCancelNew}
                   >
-                    Cancel
+                    <img src="/Images/Dashboard/Cancel.png" alt="" />
                   </button>
                 </td>
               </tr>

@@ -9,19 +9,14 @@ const JobOpenings = () => {
   // Key name for browser storage
   const storageKey = "tableData-2-2";
 
-  const [jobs, setJobs] = useState(JobOpeningsCardData);
+  const [jobs, setJobs] = useState(() => {
+    const savedData = localStorage.getItem(storageKey);
+    return savedData ? JSON.parse(savedData) : JobOpeningsCardData;
+  });
 
   useEffect(() => {
-    const savedData = localStorage.getItem(storageKey);
-
-    if (savedData) {
-      setJobs(JSON.parse(savedData));
-    } else {
-      localStorage.setItem(storageKey, JSON.stringify(JobOpeningsCardData));
-    }
-
-  }, []);
-
+    localStorage.setItem(storageKey, JSON.stringify(jobs));
+  }, [jobs, storageKey]);
 
   return (
     <section className="hs-job-openings-section hs-section-margin hs-section-margin-btm">

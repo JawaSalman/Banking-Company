@@ -78,7 +78,7 @@
   left: 0;
   bottom: calc(var(--row-gap) / -2);
   width: calc(200% + var(--row-gap));
-  height: 1px;
+  height: 2px;
 
   background: repeating-linear-gradient(
     to right,
@@ -118,15 +118,15 @@ border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba
   transform: scale(1);
  mask-image: linear-gradient(
     to right,
-    rgba(0, 0, 0, 1) 0%,   
-    rgba(0, 0, 0, 0) 100%  
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
   );
   -webkit-mask-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-  
+
 }
 
 .mh-card:nth-child(1) .mh-card-bachground,
@@ -147,7 +147,7 @@ border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba
 }
 
 .mh-benefits-grid .mh-card:nth-child(4) {
-  border-radius: 50px 20px 20px 50px; 
+  border-radius: 50px 20px 20px 50px;
 }
 
 /* ================= Card Head ================= */
@@ -317,17 +317,16 @@ border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba
 
 .mh-benefits-grid > .mh-card::before {
   content: none;
-  display: none; /* إخفاء الخط العمودي */
+  display: none;
 }
 
-    /* الخطوط الأفقية تحت الكاردات 1، 2، 3 فقط */
   .mh-benefits-grid > .mh-card:nth-child(-n+3)::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: calc(var(--row-gap)/-2);
     width: 100%;
-    height: 1px;
+    height: 2px;
     background: repeating-linear-gradient(
       to right,
        #262626 0px,
@@ -346,7 +345,7 @@ border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba
     border-radius: 40px 40px 14px 14px !important;
 
   }
-  
+
     .mh-card .mh-card-bachground
 {
   border-radius: 40px 40px 14px 14px !important;

@@ -1,85 +1,63 @@
-import React, { useEffect, useState, useCallback } from "react";
-// Framer Motion
+import React, { useEffect, useState } from "react";
+
 // eslint-disable-next-line no-unused-vars
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import "./CursorComponent.css";
 
 const Cursor = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); // State for hover interaction
 
+  // High-performance motion values for smooth tracking
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
 
-  const springConfig = { stiffness: 400, damping: 30, mass: 0.5 };
-  const smoothX = useSpring(mouseX, springConfig);
-  const smoothY = useSpring(mouseY, springConfig);
-
-  const showCursor = useCallback(() => setIsVisible(true), []);
-  const hideCursor = useCallback(() => setIsVisible(false), []);
+  // Physics-based spring config for the "follow" effect
+  const springConfig = { stiffness: 1500, damping: 60, mass: 0.05 };
+  const x = useSpring(mouseX, springConfig);
+  const y = useSpring(mouseY, springConfig);
 
   useEffect(() => {
-    // 1. Create a dynamic style element to hide the native cursor
-    const style = document.createElement("style");
-    const transparentImage = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
-
-    // Inject CSS rule only when this component is mounted
-    style.innerHTML = `
-      html, body, a, button, [role="button"] {
-        cursor: url('${transparentImage}'), auto !important;
-      }
-    `;
-    document.head.appendChild(style);
-
-    const handleMouseMove = (e) => {
-      if (!isVisible) showCursor();
+    // Update raw coordinates on mouse move
+    const moveMouse = (e) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
 
+    // Detect if hovering over interactive elements
     const handleMouseOver = (e) => {
-      const isInteractive = !!e.target.closest("button, a, .ma-hero-btn, [role='button']");
-      setIsHovered(isInteractive);
+      const target = e.target;
+      const isInteractive = target.closest('button, a, [role="button"], svg, img, li, .js_pic_text_align');
+      setIsHovered(!!isInteractive);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", moveMouse);
     window.addEventListener("mouseover", handleMouseOver);
-    document.addEventListener("mouseleave", hideCursor);
-    document.addEventListener("mouseenter", showCursor);
 
+    // Cleanup listeners on component unmount
     return () => {
-      // 2. Clean up: Remove the style tag and events when component is unmounted
-      document.head.removeChild(style);
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", moveMouse);
       window.removeEventListener("mouseover", handleMouseOver);
-      document.removeEventListener("mouseleave", hideCursor);
-      document.removeEventListener("mouseenter", showCursor);
     };
-  }, [isVisible, mouseX, mouseY, showCursor, hideCursor]);
+  }, [mouseX, mouseY]);
 
   return (
     <motion.div
-      className="custom-cursor-container"
-      style={{
-        left: smoothX,
-        top: smoothY,
-        opacity: isVisible ? 1 : 0,
-        display: isVisible ? "flex" : "none",
-      }}
+      className="custom-cursor-container flex-center"
+      style={{ x, y, translateX: "-50%", translateY: "-50%" }} // Center cursor on tip
     >
       <motion.div
-        className="cursor-outline"
+        className="cursor-outline flex-center"
         animate={{
-          scale: isHovered ? 2 : 1,
-          borderColor: isHovered ? "rgba(202, 255, 0, 0.4)" : "#caff00",
-          borderWidth: isHovered ? "3px" : "1.5px",
+          width: isHovered ? 65 : 45, // Expand outline on hover
+          height: isHovered ? 65 : 45,
         }}
-        transition={{ type: "spring", stiffness: 300, damping: 25 }}
-      />
-      <motion.div
-        className="cursor-dot"
-        animate={{ scale: isHovered ? 0.6 : 1 }}
-      />
+        transition={{ type: "spring", stiffness: 300, damping: 20, mass: 0.5 }}
+      >
+        <motion.div
+          className="cursor-dot"
+          animate={{ scale: isHovered ? 0 : 1 }} // Hide dot on hover
+        />
+      </motion.div>
     </motion.div>
   );
 };

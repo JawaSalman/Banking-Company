@@ -1,32 +1,26 @@
-/* Container centered on coordinates */
+html, body, a, button, li, [role="button"] {
+  cursor: none !important;
+}
+
 .custom-cursor-container {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999999;
   pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
-  will-change: transform;
+  z-index: 1000;
 }
 
-
-
 .cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 1.5px solid #caff00;
+  border: 2px solid var(--primary-color);
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  position: absolute;
+
 }
 
 .cursor-dot {
-  width: 6px;
-  height: 6px;
-  background-color: #caff00;
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-color);
   border-radius: 50%;
-  position: absolute;
 }

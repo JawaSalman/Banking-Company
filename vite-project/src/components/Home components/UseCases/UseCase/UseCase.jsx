@@ -3,18 +3,11 @@ import ForIndividuals from "../ForIndividuals/ForIndividuals"
 import Tittle from "../Tittle/Tittle"
 import './UseCase.css'
 //the section is complete
-// Framer Motion
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
-import { staggerContainer } from "../../../Animation/Animation";
+
 const UseCase = () => {
     return (
         <>
-            <motion.section
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+            <section
                 className='ak_use'>
                 <Tittle
                     tittle="Use Cases"
@@ -34,7 +27,7 @@ const UseCase = () => {
                     datas={productbusiness}
 
                 />
-            </motion.section>
+            </section>
         </>
 
     )
