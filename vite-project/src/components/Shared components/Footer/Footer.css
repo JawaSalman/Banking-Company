@@ -4,6 +4,19 @@ footer {
     padding-left: 80px;
     padding-right: 80px;
 
+    .tooltip {
+        position: fixed;
+        bottom: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #222;
+        color: #fff;
+        border-radius: 6px;
+        padding: 10px 20px;
+        font-size: 14px;
+        animation: all 0.5s ease-in-out;
+    }
+
     .js_logo_url_cnt {
         width: 100%;
         padding: 100px 0px 50px;
@@ -91,7 +104,8 @@ footer {
 
 @media (max-width: 1440px) {
     footer {
-margin-top: 120px;
+        margin-top: 120px;
+
         .js_logo_url_cnt {
             padding: 60px 0px 40px;
             gap: 40px;

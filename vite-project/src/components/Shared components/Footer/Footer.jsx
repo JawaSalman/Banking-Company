@@ -4,12 +4,18 @@ import './Footer.css'
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, iconHover } from '../../Animation/Animation';
+import { useState } from 'react';
 
 const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
+    const [isCopied, setCopied] = useState(false)
 
     const handleCopy = (text) => {
         navigator.clipboard.writeText(text);
-        alert("text copied")
+        setCopied(true)
+        setTimeout(() => {
+            setCopied(false)
+        }, 1200
+        )
     };
 
     return (
@@ -54,6 +60,7 @@ const Footer = ({ logo, items, contact, icons, rights, p, s }) => {
                     )
                 })}
             </motion.div>
+            {isCopied && (<div className='tooltip'>Text is copied to clipboard</div>)}
             <motion.div
                 variants={fadeIn("up", 0.4)}
                 initial="hidden"
